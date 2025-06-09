@@ -1,0 +1,4114 @@
+[
+    {
+      "id": "SEN-001",
+      "name": "Downtown Traffic Camera",
+      "type": "Camera",
+      "location": {"lat": 51.045324, "lng": -114.063014, "address": "7 Ave SW & 1 St SW, Downtown"},
+      "owner": "City of Calgary",
+      "data_collected": ["video footage", "traffic density"],
+      "privacy_policy": "Footage is stored for 30 days. Used for traffic monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-04-11",
+      "install_date": "2022-06-20",
+      "description": "Monitors traffic flow and congestion at a major downtown intersection."
+    },
+    {
+      "id": "SEN-002",
+      "name": "Stephen Ave Air Quality Sensor",
+      "type": "Air Quality Sensor",
+      "location": {"lat": 51.045719, "lng": -114.063621, "address": "8 Ave SW & 2 St SW, Downtown"},
+      "owner": "City of Calgary",
+      "data_collected": ["PM2.5", "PM10", "NO2", "Ozone"],
+      "privacy_policy": "Sensor does not collect personal information.",
+      "status": "active",
+      "last_maintenance": "2025-03-25",
+      "install_date": "2023-01-13",
+      "description": "Measures air quality indicators to monitor pollution in busy shopping area."
+    },
+    {
+      "id": "SEN-003",
+      "name": "Eau Claire Pedestrian Counter",
+      "type": "People Counter",
+      "location": {"lat": 51.053542, "lng": -114.070845, "address": "Eau Claire Market Entrance"},
+      "owner": "City of Calgary",
+      "data_collected": ["pedestrian count"],
+      "privacy_policy": "Anonymous aggregate counts only. No video/images stored.",
+      "status": "active",
+      "last_maintenance": "2025-02-18",
+      "install_date": "2021-09-30",
+      "description": "Counts the number of people entering and exiting Eau Claire Market."
+    },
+    {
+      "id": "SEN-004",
+      "name": "Bowness Park Environmental Monitor",
+      "type": "Environmental Sensor",
+      "location": {"lat": 51.085123, "lng": -114.213542, "address": "Bowness Park, Main Entrance"},
+      "owner": "City of Calgary",
+      "data_collected": ["temperature", "humidity", "CO2"],
+      "privacy_policy": "Environmental data only; no personal data collected.",
+      "status": "maintenance",
+      "last_maintenance": "2025-05-15",
+      "install_date": "2021-04-10",
+      "description": "Tracks climate and air quality data for ecological research and park safety."
+    },
+    {
+      "id": "SEN-005",
+      "name": "16 Ave NW Smart Streetlight",
+      "type": "Smart Streetlight",
+      "location": {"lat": 51.066148, "lng": -114.123849, "address": "16 Ave NW & 10 St NW"},
+      "owner": "City of Calgary",
+      "data_collected": ["ambient light", "motion detection"],
+      "privacy_policy": "Motion data not linked to individuals; used for lighting automation.",
+      "status": "active",
+      "last_maintenance": "2025-04-30",
+      "install_date": "2023-10-21",
+      "description": "Automatically adjusts streetlight brightness based on pedestrian and vehicle activity."
+    },
+    {
+      "id": "SEN-006",
+      "name": "Riverwalk Weather Station",
+      "type": "Weather Station",
+      "location": {"lat": 51.044039, "lng": -114.053580, "address": "Riverwalk near Fort Calgary"},
+      "owner": "City of Calgary",
+      "data_collected": ["temperature", "humidity", "wind speed", "precipitation"],
+      "privacy_policy": "No personal data is collected. Weather data is publicly available.",
+      "status": "active",
+      "last_maintenance": "2025-05-01",
+      "install_date": "2020-03-11",
+      "description": "Provides real-time weather updates to city services and public dashboards."
+    },
+    {
+      "id": "SEN-007",
+      "name": "Chinook Centre Parking Occupancy Sensor",
+      "type": "Parking Sensor",
+      "location": {"lat": 50.996944, "lng": -114.071944, "address": "Chinook Centre Parking Garage"},
+      "owner": "City of Calgary",
+      "data_collected": ["vehicle count", "space occupancy"],
+      "privacy_policy": "Counts vehicles anonymously. No license plate or personal data collected.",
+      "status": "active",
+      "last_maintenance": "2025-04-20",
+      "install_date": "2022-11-03",
+      "description": "Tracks parking space availability in real time for mall visitors."
+    },
+    {
+      "id": "SEN-008",
+      "name": "Sunnyside LRT Platform Camera",
+      "type": "Security Camera",
+      "location": {"lat": 51.058570, "lng": -114.078014, "address": "Sunnyside LRT Station"},
+      "owner": "Calgary Transit",
+      "data_collected": ["video footage"],
+      "privacy_policy": "Monitored for safety and security. Footage retained for 14 days.",
+      "status": "active",
+      "last_maintenance": "2025-04-17",
+      "install_date": "2021-07-25",
+      "description": "Helps ensure passenger safety at transit platform, monitored by Calgary Transit."
+    },
+    {
+      "id": "SEN-009",
+      "name": "Prince's Island Park Flood Sensor",
+      "type": "Flood Sensor",
+      "location": {"lat": 51.053611, "lng": -114.071667, "address": "Prince's Island Park"},
+      "owner": "City of Calgary",
+      "data_collected": ["river level", "soil moisture"],
+      "privacy_policy": "Environmental data only; no personal or identifying information collected.",
+      "status": "active",
+      "last_maintenance": "2025-03-28",
+      "install_date": "2022-05-08",
+      "description": "Detects rising river levels and soil moisture to provide early warning of flood risk."
+    },
+    {
+      "id": "SEN-010",
+      "name": "Westbrook Library Wi-Fi Analytics",
+      "type": "Wi-Fi Analytics",
+      "location": {"lat": 51.045679, "lng": -114.144722, "address": "Westbrook Library"},
+      "owner": "City of Calgary",
+      "data_collected": ["device counts", "dwell time"],
+      "privacy_policy": "Tracks the number of connected devices anonymously. No browsing data or personal details stored.",
+      "status": "active",
+      "last_maintenance": "2025-05-12",
+      "install_date": "2023-02-15",
+      "description": "Measures how many people use the library's Wi-Fi and for how long to improve services."
+    },
+    {
+      "id": "SEN-011",
+      "name": "Shaganappi Golf Course Air Sensor",
+      "type": "Air Quality Sensor",
+      "location": {"lat": 51.049900, "lng": -114.126700, "address": "1200 26 St SW, Shaganappi"},
+      "owner": "City of Calgary",
+      "data_collected": ["PM2.5", "PM10", "CO", "SO2"],
+      "privacy_policy": "No personal data collected.",
+      "status": "active",
+      "last_maintenance": "2025-03-19",
+      "install_date": "2022-08-14",
+      "description": "Measures air quality at Shaganappi Golf Course, especially during summer events."
+    },
+    {
+      "id": "SEN-012",
+      "name": "Heritage LRT Bike Counter",
+      "type": "Bicycle Counter",
+      "location": {"lat": 50.978407, "lng": -114.070229, "address": "Heritage LRT Station"},
+      "owner": "City of Calgary",
+      "data_collected": ["bicycle count"],
+      "privacy_policy": "Counts bikes passing sensor; no images or personal data.",
+      "status": "active",
+      "last_maintenance": "2025-04-10",
+      "install_date": "2021-05-01",
+      "description": "Counts the number of bicycles entering/exiting the Heritage LRT area."
+    },
+    {
+      "id": "SEN-013",
+      "name": "Memorial Drive Speed Radar",
+      "type": "Speed Radar",
+      "location": {"lat": 51.058100, "lng": -114.046320, "address": "Memorial Drive & Edmonton Trail"},
+      "owner": "City of Calgary",
+      "data_collected": ["vehicle speed"],
+      "privacy_policy": "Does not collect license plate or driver info.",
+      "status": "active",
+      "last_maintenance": "2025-05-07",
+      "install_date": "2022-04-20",
+      "description": "Measures and displays vehicle speeds to encourage safe driving."
+    },
+    {
+      "id": "SEN-014",
+      "name": "Victoria Park Water Quality Sensor",
+      "type": "Water Quality Sensor",
+      "location": {"lat": 51.040005, "lng": -114.057431, "address": "17 Ave SE & Macleod Trail"},
+      "owner": "City of Calgary",
+      "data_collected": ["pH", "turbidity", "temperature"],
+      "privacy_policy": "No personal data collected; water quality only.",
+      "status": "active",
+      "last_maintenance": "2025-04-22",
+      "install_date": "2022-11-18",
+      "description": "Monitors water quality in Victoria Park's streams and ponds."
+    },
+    {
+      "id": "SEN-015",
+      "name": "Foothills Hospital Emergency Entrance Camera",
+      "type": "Security Camera",
+      "location": {"lat": 51.064180, "lng": -114.130430, "address": "1403 29 St NW, Foothills Hospital"},
+      "owner": "Alberta Health Services",
+      "data_collected": ["video footage"],
+      "privacy_policy": "Footage kept for 21 days; monitored for hospital security only.",
+      "status": "active",
+      "last_maintenance": "2025-04-15",
+      "install_date": "2023-03-05",
+      "description": "Ensures safety at emergency entrance of Foothills Hospital."
+    },
+    {
+      "id": "SEN-016",
+      "name": "Southland Leisure Centre Pool Sensor",
+      "type": "Environmental Sensor",
+      "location": {"lat": 50.967003, "lng": -114.104672, "address": "2000 Southland Dr SW"},
+      "owner": "City of Calgary",
+      "data_collected": ["pool temperature", "chlorine level"],
+      "privacy_policy": "No personal data collected; monitors pool safety.",
+      "status": "active",
+      "last_maintenance": "2025-03-29",
+      "install_date": "2021-12-09",
+      "description": "Monitors water quality and safety for leisure centre pools."
+    },
+    {
+      "id": "SEN-017",
+      "name": "St. Patrick's Island Wildlife Camera",
+      "type": "Wildlife Camera",
+      "location": {"lat": 51.049250, "lng": -114.048200, "address": "St. Patrick's Island Park"},
+      "owner": "City of Calgary",
+      "data_collected": ["images", "short video clips"],
+      "privacy_policy": "Images and videos stored for wildlife monitoring; no public surveillance.",
+      "status": "active",
+      "last_maintenance": "2025-04-05",
+      "install_date": "2022-06-15",
+      "description": "Observes wildlife activity for environmental studies."
+    },
+    {
+      "id": "SEN-018",
+      "name": "South Health Campus Parking Sensor",
+      "type": "Parking Sensor",
+      "location": {"lat": 50.892000, "lng": -114.029700, "address": "4448 Front St SE, South Health Campus"},
+      "owner": "Alberta Health Services",
+      "data_collected": ["space occupancy"],
+      "privacy_policy": "Anonymous count only; no license plates or images.",
+      "status": "active",
+      "last_maintenance": "2025-04-27",
+      "install_date": "2022-10-30",
+      "description": "Tracks parking space usage for patients and staff."
+    },
+    {
+      "id": "SEN-019",
+      "name": "Olympic Plaza Noise Monitor",
+      "type": "Noise Sensor",
+      "location": {"lat": 51.045200, "lng": -114.060300, "address": "228 8 Ave SE, Olympic Plaza"},
+      "owner": "City of Calgary",
+      "data_collected": ["decibel level", "noise patterns"],
+      "privacy_policy": "No audio recordings, only decibel and pattern data.",
+      "status": "active",
+      "last_maintenance": "2025-05-10",
+      "install_date": "2022-07-20",
+      "description": "Monitors noise pollution at public event space."
+    },
+    {
+      "id": "SEN-020",
+      "name": "Glenmore Reservoir Water Level Gauge",
+      "type": "Water Level Sensor",
+      "location": {"lat": 50.977080, "lng": -114.113245, "address": "Glenmore Reservoir"},
+      "owner": "City of Calgary",
+      "data_collected": ["water level"],
+      "privacy_policy": "No personal data; environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-04-25",
+      "install_date": "2022-09-15",
+      "description": "Tracks water levels for flood prevention and reservoir management."
+    },
+    {
+      "id": "SEN-021",
+      "name": "Inglewood Bird Sanctuary Camera",
+      "type": "Wildlife Camera",
+      "location": {"lat": 51.034722, "lng": -114.020556, "address": "2425 9 Ave SE, Inglewood"},
+      "owner": "City of Calgary",
+      "data_collected": ["images", "motion-triggered video"],
+      "privacy_policy": "Used for wildlife monitoring only; no facial recognition.",
+      "status": "active",
+      "last_maintenance": "2025-03-15",
+      "install_date": "2021-08-22",
+      "description": "Monitors bird and wildlife activity in the sanctuary."
+    },
+    {
+      "id": "SEN-022",
+      "name": "Central Library People Counter",
+      "type": "People Counter",
+      "location": {"lat": 51.046944, "lng": -114.057500, "address": "800 3 St SE, Central Library"},
+      "owner": "City of Calgary",
+      "data_collected": ["visitor count", "dwell time"],
+      "privacy_policy": "Anonymous counts only; no personal identification.",
+      "status": "active",
+      "last_maintenance": "2025-05-05",
+      "install_date": "2019-11-01",
+      "description": "Tracks library usage patterns to optimize services."
+    },
+    {
+      "id": "SEN-023",
+      "name": "Deerfoot Trail Traffic Sensor",
+      "type": "Traffic Sensor",
+      "location": {"lat": 51.063056, "lng": -114.016944, "address": "Deerfoot Trail & 16 Ave NE"},
+      "owner": "City of Calgary",
+      "data_collected": ["vehicle count", "speed", "lane occupancy"],
+      "privacy_policy": "No license plate or vehicle identification collected.",
+      "status": "active",
+      "last_maintenance": "2025-04-18",
+      "install_date": "2020-05-12",
+      "description": "Monitors traffic flow on Calgary's busiest highway."
+    },
+    {
+      "id": "SEN-024",
+      "name": "Nose Hill Park Weather Station",
+      "type": "Weather Station",
+      "location": {"lat": 51.105833, "lng": -114.130278, "address": "Nose Hill Park"},
+      "owner": "City of Calgary",
+      "data_collected": ["temperature", "wind speed", "precipitation", "UV index"],
+      "privacy_policy": "Environmental data only; publicly available.",
+      "status": "active",
+      "last_maintenance": "2025-03-30",
+      "install_date": "2022-02-14",
+      "description": "Provides microclimate data for Calgary's largest urban park."
+    },
+    {
+      "id": "SEN-025",
+      "name": "Saddledome Parking Guidance",
+      "type": "Parking Guidance System",
+      "location": {"lat": 51.037500, "lng": -114.051944, "address": "555 Saddledome Rise SE"},
+      "owner": "City of Calgary",
+      "data_collected": ["space availability", "occupancy trends"],
+      "privacy_policy": "No vehicle identification; counts only.",
+      "status": "active",
+      "last_maintenance": "2025-04-28",
+      "install_date": "2021-10-05",
+      "description": "Guides event attendees to available parking spaces."
+    },
+    {
+      "id": "SEN-026",
+      "name": "Bow River Pathway Counter",
+      "type": "Bicycle/Pedestrian Counter",
+      "location": {"lat": 51.048611, "lng": -114.069722, "address": "Bow River Pathway near Centre St"},
+      "owner": "City of Calgary",
+      "data_collected": ["bicycle count", "pedestrian count"],
+      "privacy_policy": "Anonymous counts only; no images stored.",
+      "status": "active",
+      "last_maintenance": "2025-05-03",
+      "install_date": "2020-07-15",
+      "description": "Tracks usage of popular recreational pathway."
+    },
+    {
+      "id": "SEN-027",
+      "name": "McMahon Stadium Security Camera",
+      "type": "Security Camera",
+      "location": {"lat": 51.070833, "lng": -114.123611, "address": "1817 Crowchild Trail NW"},
+      "owner": "University of Calgary",
+      "data_collected": ["video footage"],
+      "privacy_policy": "Footage stored for 30 days; used for security only.",
+      "status": "active",
+      "last_maintenance": "2025-04-14",
+      "install_date": "2022-01-20",
+      "description": "Ensures safety during stadium events."
+    },
+    {
+      "id": "SEN-028",
+      "name": "Fish Creek Park Air Monitor",
+      "type": "Air Quality Sensor",
+      "location": {"lat": 50.915278, "lng": -114.042778, "address": "Fish Creek Provincial Park"},
+      "owner": "Province of Alberta",
+      "data_collected": ["PM2.5", "O3", "NO2", "SO2"],
+      "privacy_policy": "Environmental data only.",
+      "status": "active",
+      "last_maintenance": "2025-03-22",
+      "install_date": "2023-04-10",
+      "description": "Monitors air quality in Calgary's large urban park."
+    },
+    {
+      "id": "SEN-029",
+      "name": "Calgary Zoo Animal Tracker",
+      "type": "RFID Sensor",
+      "location": {"lat": 51.045833, "lng": -114.030278, "address": "210 St. George's Drive NE"},
+      "owner": "Calgary Zoo",
+      "data_collected": ["animal movement", "enclosure usage"],
+      "privacy_policy": "Animal tracking only; no visitor data collected.",
+      "status": "active",
+      "last_maintenance": "2025-05-08",
+      "install_date": "2023-06-12",
+      "description": "Monitors animal behavior and enclosure usage patterns."
+    },
+    {
+      "id": "SEN-030",
+      "name": "TELUS Spark Smart Bench",
+      "type": "Smart Bench",
+      "location": {"lat": 51.046944, "lng": -114.020278, "address": "220 St. George's Drive NE"},
+      "owner": "TELUS Spark",
+      "data_collected": ["usage duration", "ambient temperature"],
+      "privacy_policy": "No personal data; usage statistics only.",
+      "status": "active",
+      "last_maintenance": "2025-04-16",
+      "install_date": "2023-07-01",
+      "description": "Solar-powered bench that collects usage data."
+    },
+    {
+      "id": "SEN-031",
+      "name": "Crescent Heights Traffic Camera",
+      "type": "Camera",
+      "location": {"lat": 51.054722, "lng": -114.056944, "address": "Crescent Rd & Centre St N"},
+      "owner": "City of Calgary",
+      "data_collected": ["video footage", "traffic volume"],
+      "privacy_policy": "Footage stored for 14 days; traffic monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-04-19",
+      "install_date": "2021-11-10",
+      "description": "Monitors traffic at busy Crescent Heights intersection."
+    },
+    {
+      "id": "SEN-032",
+      "name": "Kensington Pedestrian Counter",
+      "type": "People Counter",
+      "location": {"lat": 51.051389, "lng": -114.080833, "address": "10 St NW & Kensington Rd"},
+      "owner": "City of Calgary",
+      "data_collected": ["pedestrian volume"],
+      "privacy_policy": "Anonymous counts only.",
+      "status": "active",
+      "last_maintenance": "2025-03-17",
+      "install_date": "2022-09-05",
+      "description": "Tracks pedestrian activity in Kensington shopping district."
+    },
+    {
+      "id": "SEN-033",
+      "name": "Bow Tower Lobby Sensor",
+      "type": "Occupancy Sensor",
+      "location": {"lat": 51.046389, "lng": -114.063611, "address": "500 Centre St SE, Bow Tower"},
+      "owner": "Brookfield Properties",
+      "data_collected": ["occupancy count", "movement patterns"],
+      "privacy_policy": "No personal identification; aggregate data only.",
+      "status": "active",
+      "last_maintenance": "2025-04-23",
+      "install_date": "2023-01-30",
+      "description": "Monitors lobby usage in downtown office tower."
+    },
+    {
+      "id": "SEN-034",
+      "name": "Mount Royal University Air Sensor",
+      "type": "Air Quality Sensor",
+      "location": {"lat": 51.010833, "lng": -114.132778, "address": "4825 Mount Royal Gate SW"},
+      "owner": "Mount Royal University",
+      "data_collected": ["PM2.5", "CO2", "VOCs"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-05-09",
+      "install_date": "2022-10-15",
+      "description": "Monitors campus air quality for student health."
+    },
+    {
+      "id": "SEN-035",
+      "name": "SAIT Campus Wi-Fi Analytics",
+      "type": "Wi-Fi Analytics",
+      "location": {"lat": 51.064722, "lng": -114.088611, "address": "1301 16 Ave NW"},
+      "owner": "SAIT Polytechnic",
+      "data_collected": ["device density", "connection duration"],
+      "privacy_policy": "Anonymous usage patterns only; no personal data.",
+      "status": "active",
+      "last_maintenance": "2025-04-26",
+      "install_date": "2021-09-15",
+      "description": "Optimizes Wi-Fi coverage across campus buildings."
+    },
+    {
+      "id": "SEN-036",
+      "name": "Peace Bridge Counter",
+      "type": "Bicycle/Pedestrian Counter",
+      "location": {"lat": 51.051944, "lng": -114.074722, "address": "Peace Bridge"},
+      "owner": "City of Calgary",
+      "data_collected": ["bicycle count", "pedestrian count"],
+      "privacy_policy": "Anonymous counts only.",
+      "status": "active",
+      "last_maintenance": "2025-03-21",
+      "install_date": "2019-05-10",
+      "description": "Tracks usage of iconic pedestrian/cycling bridge."
+    },
+    {
+      "id": "SEN-037",
+      "name": "East Village Flood Sensor",
+      "type": "Flood Sensor",
+      "location": {"lat": 51.048056, "lng": -114.055833, "address": "RiverWalk, East Village"},
+      "owner": "City of Calgary",
+      "data_collected": ["water level", "soil moisture"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-04-29",
+      "install_date": "2022-04-05",
+      "description": "Early warning system for Bow River flooding."
+    },
+    {
+      "id": "SEN-038",
+      "name": "Northland Mall Parking Sensor",
+      "type": "Parking Sensor",
+      "location": {"lat": 51.092500, "lng": -114.078611, "address": "Northland Village Mall"},
+      "owner": "Northland Properties",
+      "data_collected": ["space occupancy"],
+      "privacy_policy": "No vehicle identification; counts only.",
+      "status": "active",
+      "last_maintenance": "2025-03-24",
+      "install_date": "2023-03-18",
+      "description": "Guides shoppers to available parking spaces."
+    },
+    {
+      "id": "SEN-039",
+      "name": "Stampede Park Noise Monitor",
+      "type": "Noise Sensor",
+      "location": {"lat": 51.035833, "lng": -114.056944, "address": "Stampede Park"},
+      "owner": "Calgary Stampede",
+      "data_collected": ["decibel levels", "noise frequency"],
+      "privacy_policy": "No audio recordings; decibel measurements only.",
+      "status": "active",
+      "last_maintenance": "2025-05-14",
+      "install_date": "2021-06-25",
+      "description": "Monitors noise levels during Stampede events."
+    },
+    {
+      "id": "SEN-040",
+      "name": "University of Calgary Smart Bin",
+      "type": "Smart Waste Bin",
+      "location": {"lat": 51.078611, "lng": -114.131389, "address": "University of Calgary Main Campus"},
+      "owner": "University of Calgary",
+      "data_collected": ["fill level", "collection frequency"],
+      "privacy_policy": "No personal data; waste management only.",
+      "status": "active",
+      "last_maintenance": "2025-04-21",
+      "install_date": "2022-11-30",
+      "description": "Optimizes waste collection routes on campus."
+    },
+    {
+      "id": "SEN-041",
+      "name": "Marda Loop Traffic Camera",
+      "type": "Camera",
+      "location": {"lat": 51.025833, "lng": -114.091667, "address": "33 Ave & 20 St SW"},
+      "owner": "City of Calgary",
+      "data_collected": ["video footage", "traffic patterns"],
+      "privacy_policy": "Footage stored for 21 days; traffic monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-03-26",
+      "install_date": "2022-05-20",
+      "description": "Monitors busy Marda Loop intersection."
+    },
+    {
+      "id": "SEN-042",
+      "name": "South Calgary Park Irrigation Sensor",
+      "type": "Soil Moisture Sensor",
+      "location": {"lat": 50.988889, "lng": -114.088611, "address": "South Calgary Park"},
+      "owner": "City of Calgary",
+      "data_collected": ["soil moisture", "temperature"],
+      "privacy_policy": "Environmental data only.",
+      "status": "active",
+      "last_maintenance": "2025-05-06",
+      "install_date": "2023-04-25",
+      "description": "Optimizes park irrigation based on soil conditions."
+    },
+    {
+      "id": "SEN-043",
+      "name": "Brentwood LRT Platform Camera",
+      "type": "Security Camera",
+      "location": {"lat": 51.081944, "lng": -114.131667, "address": "Brentwood LRT Station"},
+      "owner": "Calgary Transit",
+      "data_collected": ["video footage"],
+      "privacy_policy": "Footage stored for 14 days; security purposes only.",
+      "status": "active",
+      "last_maintenance": "2025-04-13",
+      "install_date": "2020-08-15",
+      "description": "Ensures passenger safety at university-area station."
+    },
+    {
+      "id": "SEN-044",
+      "name": "CrossIron Mills Foot Traffic Counter",
+      "type": "People Counter",
+      "location": {"lat": 51.203611, "lng": -113.981944, "address": "CrossIron Mills Mall"},
+      "owner": "CrossIron Mills",
+      "data_collected": ["visitor count", "entry/exit patterns"],
+      "privacy_policy": "Anonymous counts only; no personal data.",
+      "status": "active",
+      "last_maintenance": "2025-03-23",
+      "install_date": "2021-12-01",
+      "description": "Tracks mall visitor volume and flow patterns."
+    },
+    {
+      "id": "SEN-045",
+      "name": "Bow River Water Quality Sensor",
+      "type": "Water Quality Sensor",
+      "location": {"lat": 51.056944, "lng": -114.070833, "address": "Bow River near Prince's Island"},
+      "owner": "City of Calgary",
+      "data_collected": ["pH", "turbidity", "dissolved oxygen"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-05-04",
+      "install_date": "2020-09-10",
+      "description": "Monitors water quality in the Bow River."
+    },
+    {
+      "id": "SEN-046",
+      "name": "Spyhill Landfill Gas Monitor",
+      "type": "Gas Sensor",
+      "location": {"lat": 51.150000, "lng": -114.266667, "address": "Spyhill Landfill"},
+      "owner": "City of Calgary",
+      "data_collected": ["methane levels", "CO2", "VOCs"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-04-24",
+      "install_date": "2019-10-15",
+      "description": "Tracks landfill gas emissions for environmental compliance."
+    },
+    {
+      "id": "SEN-047",
+      "name": "Glenbow Ranch Park Camera",
+      "type": "Wildlife Camera",
+      "location": {"lat": 51.173611, "lng": -114.403056, "address": "Glenbow Ranch Provincial Park"},
+      "owner": "Province of Alberta",
+      "data_collected": ["images", "motion-triggered video"],
+      "privacy_policy": "Wildlife monitoring only; no visitor surveillance.",
+      "status": "active",
+      "last_maintenance": "2025-03-20",
+      "install_date": "2022-07-10",
+      "description": "Monitors wildlife activity in provincial park."
+    },
+    {
+      "id": "SEN-048",
+      "name": "YYC Airport Parking Sensor",
+      "type": "Parking Sensor",
+      "location": {"lat": 51.131944, "lng": -114.010278, "address": "Calgary International Airport"},
+      "owner": "YYC Airport Authority",
+      "data_collected": ["space availability", "occupancy trends"],
+      "privacy_policy": "No vehicle identification; counts only.",
+      "status": "active",
+      "last_maintenance": "2025-05-13",
+      "install_date": "2020-12-01",
+      "description": "Guides airport visitors to available parking."
+    },
+    {
+      "id": "SEN-049",
+      "name": "Cranston Weather Station",
+      "type": "Weather Station",
+      "location": {"lat": 50.883333, "lng": -113.933333, "address": "Cranston Community Park"},
+      "owner": "City of Calgary",
+      "data_collected": ["temperature", "wind speed", "precipitation"],
+      "privacy_policy": "Environmental data only.",
+      "status": "active",
+      "last_maintenance": "2025-04-09",
+      "install_date": "2023-05-20",
+      "description": "Monitors weather in southeast Calgary community."
+    },
+    {
+      "id": "SEN-050",
+      "name": "Seton Recreation Center Pool Sensor",
+      "type": "Environmental Sensor",
+      "location": {"lat": 50.892222, "lng": -113.958333, "address": "Seton YMCA"},
+      "owner": "City of Calgary",
+      "data_collected": ["pool temperature", "chlorine levels"],
+      "privacy_policy": "No personal data; water quality only.",
+      "status": "active",
+      "last_maintenance": "2025-03-27",
+      "install_date": "2022-12-05",
+      "description": "Ensures safe swimming conditions in public pool."
+    },
+    {
+      "id": "SEN-051",
+      "name": "Tuscany LRT Bike Counter",
+      "type": "Bicycle Counter",
+      "location": {"lat": 51.128611, "lng": -114.227778, "address": "Tuscany LRT Station"},
+      "owner": "City of Calgary",
+      "data_collected": ["bicycle count"],
+      "privacy_policy": "Anonymous counts only.",
+      "status": "active",
+      "last_maintenance": "2025-05-11",
+      "install_date": "2021-04-05",
+      "description": "Tracks bicycle usage at northwest LRT station."
+    },
+    {
+      "id": "SEN-052",
+      "name": "Max Bell Arena Ice Monitor",
+      "type": "Ice Sensor",
+      "location": {"lat": 51.056944, "lng": -114.038889, "address": "Max Bell Centre"},
+      "owner": "City of Calgary",
+      "data_collected": ["ice temperature", "thickness"],
+      "privacy_policy": "No personal data; ice conditions only.",
+      "status": "active",
+      "last_maintenance": "2025-04-08",
+      "install_date": "2022-01-15",
+      "description": "Monitors ice quality for skating and hockey."
+    },
+    {
+      "id": "SEN-053",
+      "name": "Sunalta School Air Quality",
+      "type": "Air Quality Sensor",
+      "location": {"lat": 51.046111, "lng": -114.096944, "address": "Sunalta Elementary School"},
+      "owner": "Calgary Board of Education",
+      "data_collected": ["PM2.5", "CO2", "temperature"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-03-16",
+      "install_date": "2023-02-10",
+      "description": "Ensures healthy air quality in elementary school."
+    },
+    {
+      "id": "SEN-054",
+      "name": "Roxboro Park Flood Sensor",
+      "type": "Flood Sensor",
+      "location": {"lat": 51.040833, "lng": -114.110833, "address": "Roxboro Park"},
+      "owner": "City of Calgary",
+      "data_collected": ["river level", "soil moisture"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-05-02",
+      "install_date": "2021-07-15",
+      "description": "Monitors Elbow River flood risk in community park."
+    },
+    {
+      "id": "SEN-055",
+      "name": "Northmount Smart Streetlight",
+      "type": "Smart Streetlight",
+      "location": {"lat": 51.098056, "lng": -114.121944, "address": "Northmount Drive NW"},
+      "owner": "City of Calgary",
+      "data_collected": ["ambient light", "motion detection"],
+      "privacy_policy": "No personal data; lighting optimization only.",
+      "status": "active",
+      "last_maintenance": "2025-04-07",
+      "install_date": "2023-08-12",
+      "description": "Adaptive lighting for energy efficiency."
+    },
+    {
+      "id": "SEN-056",
+      "name": "West Springs Noise Monitor",
+      "type": "Noise Sensor",
+      "location": {"lat": 51.093611, "lng": -114.218056, "address": "West Springs Blvd"},
+      "owner": "City of Calgary",
+      "data_collected": ["decibel levels", "noise frequency"],
+      "privacy_policy": "No audio recordings; measurements only.",
+      "status": "active",
+      "last_maintenance": "2025-03-14",
+      "install_date": "2022-06-25",
+      "description": "Monitors community noise levels near construction."
+    },
+    {
+      "id": "SEN-057",
+      "name": "Pineridge Water Quality",
+      "type": "Water Quality Sensor",
+      "location": {"lat": 51.070833, "lng": -113.981944, "address": "Pineridge Community Pond"},
+      "owner": "City of Calgary",
+      "data_collected": ["pH", "turbidity", "temperature"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-04-06",
+      "install_date": "2021-05-20",
+      "description": "Monitors water quality in community pond."
+    },
+    {
+      "id": "SEN-058",
+      "name": "McHugh Bluff Park Bench Sensor",
+      "type": "Smart Bench",
+      "location": {"lat": 51.055556, "lng": -114.065278, "address": "McHugh Bluff Park"},
+      "owner": "City of Calgary",
+      "data_collected": ["usage duration", "ambient temperature"],
+      "privacy_policy": "No personal data; usage statistics only.",
+      "status": "active",
+      "last_maintenance": "2025-05-16",
+      "install_date": "2023-09-05",
+      "description": "Solar-powered bench with usage monitoring."
+    },
+    {
+      "id": "SEN-059",
+      "name": "Canyon Meadows LRT Security",
+      "type": "Security Camera",
+      "location": {"lat": 50.943056, "lng": -114.073611, "address": "Canyon Meadows LRT Station"},
+      "owner": "Calgary Transit",
+      "data_collected": ["video footage"],
+      "privacy_policy": "Footage stored for 14 days; security only.",
+      "status": "active",
+      "last_maintenance": "2025-03-13",
+      "install_date": "2020-10-15",
+      "description": "Ensures passenger safety at south LRT station."
+    },
+    {
+      "id": "SEN-060",
+      "name": "Edworthy Park Wildlife Camera",
+      "type": "Wildlife Camera",
+      "location": {"lat": 51.058333, "lng": -114.170833, "address": "Edworthy Park"},
+      "owner": "City of Calgary",
+      "data_collected": ["images", "motion-triggered video"],
+      "privacy_policy": "Wildlife monitoring only; no visitor surveillance.",
+      "status": "active",
+      "last_maintenance": "2025-05-17",
+      "install_date": "2022-08-20",
+      "description": "Monitors wildlife in Bow River valley park."
+    },
+    {
+      "id": "SEN-061",
+      "name": "Coventry Hills Traffic Camera",
+      "type": "Camera",
+      "location": {"lat": 51.130556, "lng": -113.991667, "address": "Country Hills Blvd & Harvest Hills Blvd"},
+      "owner": "City of Calgary",
+      "data_collected": ["video footage", "traffic volume"],
+      "privacy_policy": "Footage stored for 14 days; traffic monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-04-04",
+      "install_date": "2021-12-10",
+      "description": "Monitors busy northeast intersection."
+    },
+    {
+      "id": "SEN-062",
+      "name": "Silver Springs Golf Air Quality",
+      "type": "Air Quality Sensor",
+      "location": {"lat": 51.115278, "lng": -114.222222, "address": "Silver Springs Golf Course"},
+      "owner": "City of Calgary",
+      "data_collected": ["PM2.5", "O3", "NO2"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-03-12",
+      "install_date": "2022-09-10",
+      "description": "Monitors air quality at public golf course."
+    },
+    {
+      "id": "SEN-063",
+      "name": "Valley Ridge Park Irrigation",
+      "type": "Soil Moisture Sensor",
+      "location": {"lat": 51.098611, "lng": -114.261111, "address": "Valley Ridge Park"},
+      "owner": "City of Calgary",
+      "data_collected": ["soil moisture", "temperature"],
+      "privacy_policy": "Environmental data only.",
+      "status": "active",
+      "last_maintenance": "2025-05-18",
+      "install_date": "2023-06-01",
+      "description": "Optimizes park irrigation based on soil conditions."
+    },
+    {
+      "id": "SEN-064",
+      "name": "Southcentre Mall People Counter",
+      "type": "People Counter",
+      "location": {"lat": 50.953056, "lng": -114.060278, "address": "Southcentre Mall Entrance"},
+      "owner": "Southcentre Mall",
+      "data_collected": ["visitor count", "entry patterns"],
+      "privacy_policy": "Anonymous counts only.",
+      "status": "active",
+      "last_maintenance": "2025-04-03",
+      "install_date": "2021-11-20",
+      "description": "Tracks mall visitor volume and flow."
+    },
+    {
+      "id": "SEN-065",
+      "name": "Bridgeland Community Garden Sensor",
+      "type": "Soil Sensor",
+      "location": {"lat": 51.054722, "lng": -114.050833, "address": "Bridgeland Community Garden"},
+      "owner": "City of Calgary",
+      "data_collected": ["soil moisture", "temperature", "nutrient levels"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-03-11",
+      "install_date": "2022-04-15",
+      "description": "Helps community gardeners optimize plant health."
+    },
+    {
+      "id": "SEN-066",
+      "name": "Harvest Hills Smart Crosswalk",
+      "type": "Pedestrian Sensor",
+      "location": {"lat": 51.136111, "lng": -113.983333, "address": "Harvest Hills Blvd & Harvest Park Way"},
+      "owner": "City of Calgary",
+      "data_collected": ["pedestrian count", "crossing frequency"],
+      "privacy_policy": "Anonymous counts only; no personal data.",
+      "status": "active",
+      "last_maintenance": "2025-05-19",
+      "install_date": "2023-05-05",
+      "description": "Improves pedestrian safety at busy crosswalk."
+    },
+    {
+      "id": "SEN-067",
+      "name": "Rockyview Hospital Parking",
+      "type": "Parking Sensor",
+      "location": {"lat": 50.980556, "lng": -114.089722, "address": "Rockyview General Hospital"},
+      "owner": "Alberta Health Services",
+      "data_collected": ["space occupancy"],
+      "privacy_policy": "No vehicle identification; counts only.",
+      "status": "active",
+      "last_maintenance": "2025-04-02",
+      "install_date": "2020-07-20",
+      "description": "Guides hospital visitors to available parking."
+    },
+    {
+      "id": "SEN-068",
+      "name": "Glenmore Athletic Park Track Sensor",
+      "type": "Usage Sensor",
+      "location": {"lat": 50.983333, "lng": -114.116667, "address": "Glenmore Athletic Park"},
+      "owner": "City of Calgary",
+      "data_collected": ["usage count", "peak times"],
+      "privacy_policy": "Anonymous counts only.",
+      "status": "active",
+      "last_maintenance": "2025-03-10",
+      "install_date": "2022-10-05",
+      "description": "Tracks usage of public athletic track."
+    },
+    {
+      "id": "SEN-069",
+      "name": "McKenzie Towne Fountain Sensor",
+      "type": "Water Quality Sensor",
+      "location": {"lat": 50.896944, "lng": -113.948611, "address": "McKenzie Towne Square"},
+      "owner": "City of Calgary",
+      "data_collected": ["water quality", "flow rate"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-05-20",
+      "install_date": "2023-07-15",
+      "description": "Monitors community fountain water quality."
+    },
+    {
+      "id": "SEN-070",
+      "name": "Sage Hill Traffic Counter",
+      "type": "Traffic Counter",
+      "location": {"lat": 51.173611, "lng": -114.225000, "address": "Sage Hill Blvd & Symons Valley Pkwy"},
+      "owner": "City of Calgary",
+      "data_collected": ["vehicle count", "speed"],
+      "privacy_policy": "No license plate or vehicle identification.",
+      "status": "active",
+      "last_maintenance": "2025-04-01",
+      "install_date": "2021-10-10",
+      "description": "Monitors traffic in northwest community."
+    },
+    {
+      "id": "SEN-071",
+      "name": "Auburn Bay Dock Sensor",
+      "type": "Water Level Sensor",
+      "location": {"lat": 50.881944, "lng": -113.936111, "address": "Auburn Bay Community Dock"},
+      "owner": "City of Calgary",
+      "data_collected": ["water level", "temperature"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-03-09",
+      "install_date": "2022-05-25",
+      "description": "Monitors lake levels in southeast community."
+    },
+    {
+      "id": "SEN-072",
+      "name": "Sandstone MAC Security Camera",
+      "type": "Security Camera",
+      "location": {"lat": 51.120833, "lng": -114.156944, "address": "Sandstone MAC Arena"},
+      "owner": "City of Calgary",
+      "data_collected": ["video footage"],
+      "privacy_policy": "Footage stored for 14 days; security only.",
+      "status": "active",
+      "last_maintenance": "2025-05-21",
+      "install_date": "2020-11-15",
+      "description": "Ensures safety at municipal recreation center."
+    },
+    {
+      "id": "SEN-073",
+      "name": "Talisman Center Pool Sensor",
+      "type": "Environmental Sensor",
+      "location": {"lat": 50.996944, "lng": -114.074722, "address": "Talisman Centre Pool"},
+      "owner": "City of Calgary",
+      "data_collected": ["water temperature", "chlorine levels"],
+      "privacy_policy": "No personal data; water quality only.",
+      "status": "active",
+      "last_maintenance": "2025-03-31",
+      "install_date": "2021-08-05",
+      "description": "Monitors public pool water quality."
+    },
+    {
+      "id": "SEN-074",
+      "name": "Westside Recreation Center Counter",
+      "type": "People Counter",
+      "location": {"lat": 51.068611, "lng": -114.206944, "address": "Westside Recreation Centre"},
+      "owner": "City of Calgary",
+      "data_collected": ["visitor count", "entry patterns"],
+      "privacy_policy": "Anonymous counts only.",
+      "status": "active",
+      "last_maintenance": "2025-03-08",
+      "install_date": "2023-01-10",
+      "description": "Tracks usage of recreation facility."
+    },
+    {
+      "id": "SEN-075",
+      "name": "Country Hills Village Parking",
+      "type": "Parking Sensor",
+      "location": {"lat": 51.136944, "lng": -114.006944, "address": "Country Hills Village"},
+      "owner": "Country Hills Village",
+      "data_collected": ["space occupancy"],
+      "privacy_policy": "No vehicle identification; counts only.",
+      "status": "active",
+      "last_maintenance": "2025-05-22",
+      "install_date": "2022-07-05",
+      "description": "Monitors shopping center parking availability."
+    },
+    {
+      "id": "SEN-076",
+      "name": "Douglasdale Trail Counter",
+      "type": "Bicycle/Pedestrian Counter",
+      "location": {"lat": 50.920833, "lng": -113.958333, "address": "Douglasdale Trail"},
+      "owner": "City of Calgary",
+      "data_collected": ["bicycle count", "pedestrian count"],
+      "privacy_policy": "Anonymous counts only.",
+      "status": "active",
+      "last_maintenance": "2025-03-30",
+      "install_date": "2020-09-15",
+      "description": "Tracks usage of community pathway."
+    },
+    {
+      "id": "SEN-077",
+      "name": "Varsity Estates Air Quality",
+      "type": "Air Quality Sensor",
+      "location": {"lat": 51.083333, "lng": -114.133333, "address": "Varsity Estates Park"},
+      "owner": "City of Calgary",
+      "data_collected": ["PM2.5", "O3", "NO2"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-03-07",
+      "install_date": "2021-06-10",
+      "description": "Monitors air quality in northwest community."
+    },
+    {
+      "id": "SEN-078",
+      "name": "Marlborough Mall Wi-Fi",
+      "type": "Wi-Fi Analytics",
+      "location": {"lat": 51.055556, "lng": -113.983333, "address": "Marlborough Mall"},
+      "owner": "Marlborough Mall",
+      "data_collected": ["device counts", "connection duration"],
+      "privacy_policy": "Anonymous usage patterns only.",
+      "status": "active",
+      "last_maintenance": "2025-05-23",
+      "install_date": "2022-12-20",
+      "description": "Analyzes mall visitor Wi-Fi usage patterns."
+    },
+    {
+      "id": "SEN-079",
+      "name": "Pump Hill Traffic Camera",
+      "type": "Camera",
+      "location": {"lat": 50.988889, "lng": -114.116667, "address": "Pump Hill Intersection"},
+      "owner": "City of Calgary",
+      "data_collected": ["video footage", "traffic volume"],
+      "privacy_policy": "Footage stored for 14 days; traffic monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-03-29",
+      "install_date": "2020-12-10",
+      "description": "Monitors traffic in southwest community."
+    },
+    {
+      "id": "SEN-080",
+      "name": "Sierra Springs Smart Bin",
+      "type": "Smart Waste Bin",
+      "location": {"lat": 51.133333, "lng": -113.966667, "address": "Sierra Springs Plaza"},
+      "owner": "City of Calgary",
+      "data_collected": ["fill level", "collection frequency"],
+      "privacy_policy": "No personal data; waste management only.",
+      "status": "active",
+      "last_maintenance": "2025-03-06",
+      "install_date": "2023-04-10",
+      "description": "Optimizes waste collection in community plaza."
+    },
+    {
+      "id": "SEN-081",
+      "name": "Shawnessy LRT Bike Rack",
+      "type": "Bicycle Counter",
+      "location": {"lat": 50.898611, "lng": -114.061944, "address": "Shawnessy LRT Station"},
+      "owner": "Calgary Transit",
+      "data_collected": ["bicycle count"],
+      "privacy_policy": "Anonymous counts only.",
+      "status": "active",
+      "last_maintenance": "2025-05-24",
+      "install_date": "2021-09-20",
+      "description": "Tracks bicycle rack usage at LRT station."
+    },
+    {
+      "id": "SEN-082",
+      "name": "Panorama Hills Weather",
+      "type": "Weather Station",
+      "location": {"lat": 51.155556, "lng": -114.086111, "address": "Panorama Hills Community"},
+      "owner": "City of Calgary",
+      "data_collected": ["temperature", "wind speed", "precipitation"],
+      "privacy_policy": "Environmental data only.",
+      "status": "active",
+      "last_maintenance": "2025-03-28",
+      "install_date": "2022-03-15",
+      "description": "Monitors weather in northwest community."
+    },
+    {
+      "id": "SEN-083",
+      "name": "Evergreen Park Irrigation",
+      "type": "Soil Moisture Sensor",
+      "location": {"lat": 50.880556, "lng": -114.069444, "address": "Evergreen Community Park"},
+      "owner": "City of Calgary",
+      "data_collected": ["soil moisture", "temperature"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-03-05",
+      "install_date": "2021-07-10",
+      "description": "Optimizes park irrigation based on soil conditions."
+    },
+    {
+      "id": "SEN-084",
+      "name": "Dalhousie LRT Security",
+      "type": "Security Camera",
+      "location": {"lat": 51.093056, "lng": -114.140556, "address": "Dalhousie LRT Station"},
+      "owner": "Calgary Transit",
+      "data_collected": ["video footage"],
+      "privacy_policy": "Footage stored for 14 days; security only.",
+      "status": "active",
+      "last_maintenance": "2025-05-25",
+      "install_date": "2020-08-20",
+      "description": "Ensures passenger safety at northwest station."
+    },
+    {
+      "id": "SEN-085",
+      "name": "Queensland Noise Monitor",
+      "type": "Noise Sensor",
+      "location": {"lat": 50.933333, "lng": -114.016667, "address": "Queensland Community"},
+      "owner": "City of Calgary",
+      "data_collected": ["decibel levels", "noise frequency"],
+      "privacy_policy": "No audio recordings; measurements only.",
+      "status": "active",
+      "last_maintenance": "2025-03-27",
+      "install_date": "2022-11-15",
+      "description": "Monitors community noise levels."
+    },
+    {
+      "id": "SEN-086",
+      "name": "Royal Oak Smart Crosswalk",
+      "type": "Pedestrian Sensor",
+      "location": {"lat": 51.150000, "lng": -114.183333, "address": "Royal Oak Blvd"},
+      "owner": "City of Calgary",
+      "data_collected": ["pedestrian count", "crossing frequency"],
+      "privacy_policy": "Anonymous counts only.",
+      "status": "active",
+      "last_maintenance": "2025-03-04",
+      "install_date": "2023-03-01",
+      "description": "Improves pedestrian safety at busy crosswalk."
+    },
+    {
+      "id": "SEN-087",
+      "name": "Midnapore Lake Sensor",
+      "type": "Water Quality Sensor",
+      "location": {"lat": 50.900000, "lng": -114.066667, "address": "Midnapore Lake"},
+      "owner": "City of Calgary",
+      "data_collected": ["water quality", "temperature"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-05-26",
+      "install_date": "2020-10-10",
+      "description": "Monitors lake water quality in community."
+    },
+    {
+      "id": "SEN-088",
+      "name": "Brentwood Smart Streetlight",
+      "type": "Smart Streetlight",
+      "location": {"lat": 51.081944, "lng": -114.131944, "address": "Brentwood Community"},
+      "owner": "City of Calgary",
+      "data_collected": ["ambient light", "motion detection"],
+      "privacy_policy": "No personal data; lighting optimization only.",
+      "status": "active",
+      "last_maintenance": "2025-03-26",
+      "install_date": "2021-12-15",
+      "description": "Adaptive lighting for energy efficiency."
+    },
+    {
+      "id": "SEN-089",
+      "name": "Huntington Hills Library Counter",
+      "type": "People Counter",
+      "location": {"lat": 51.123611, "lng": -114.086111, "address": "Huntington Hills Library"},
+      "owner": "City of Calgary",
+      "data_collected": ["visitor count", "dwell time"],
+      "privacy_policy": "Anonymous counts only.",
+      "status": "active",
+      "last_maintenance": "2025-03-03",
+      "install_date": "2022-08-05",
+      "description": "Tracks library usage patterns."
+    },
+    {
+      "id": "SEN-090",
+      "name": "Evanston Pond Sensor",
+      "type": "Water Level Sensor",
+      "location": {"lat": 51.200000, "lng": -114.066667, "address": "Evanston Community Pond"},
+      "owner": "City of Calgary",
+      "data_collected": ["water level", "temperature"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-05-27",
+      "install_date": "2023-02-20",
+      "description": "Monitors pond levels in northwest community."
+    },
+    {
+      "id": "SEN-091",
+      "name": "Macleod Trail Traffic Camera",
+      "type": "Camera",
+      "location": {"lat": 51.016667, "lng": -114.066667, "address": "Macleod Trail & 162 Ave SW"},
+      "owner": "City of Calgary",
+      "data_collected": ["video footage", "traffic volume"],
+      "privacy_policy": "Footage stored for 14 days; traffic monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-03-25",
+      "install_date": "2020-11-20",
+      "description": "Monitors traffic on busy south corridor."
+    },
+    {
+      "id": "SEN-092",
+      "name": "Saddle Ridge Weather Station",
+      "type": "Weather Station",
+      "location": {"lat": 51.116667, "lng": -113.950000, "address": "Saddle Ridge Community"},
+      "owner": "City of Calgary",
+      "data_collected": ["temperature", "wind speed", "precipitation"],
+      "privacy_policy": "Environmental data only.",
+      "status": "active",
+      "last_maintenance": "2025-03-02",
+      "install_date": "2021-10-20",
+      "description": "Monitors weather in northeast community."
+    },
+    {
+      "id": "SEN-093",
+      "name": "Cranston Smart Bin",
+      "type": "Smart Waste Bin",
+      "location": {"lat": 50.883333, "lng": -113.933333, "address": "Cranston Community Park"},
+      "owner": "City of Calgary",
+      "data_collected": ["fill level", "collection frequency"],
+      "privacy_policy": "No personal data; waste management only.",
+      "status": "active",
+      "last_maintenance": "2025-05-28",
+      "install_date": "2022-09-15",
+      "description": "Optimizes waste collection in community park."
+    },
+    {
+      "id": "SEN-094",
+      "name": "Tuxedo Park Air Quality",
+      "type": "Air Quality Sensor",
+      "location": {"lat": 51.066667, "lng": -114.050000, "address": "Tuxedo Park Community"},
+      "owner": "City of Calgary",
+      "data_collected": ["PM2.5", "O3", "NO2"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-03-24",
+      "install_date": "2020-12-15",
+      "description": "Monitors air quality in inner-city community."
+    },
+    {
+      "id": "SEN-095",
+      "name": "Scenic Acres Pathway Counter",
+      "type": "Bicycle/Pedestrian Counter",
+      "location": {"lat": 51.116667, "lng": -114.216667, "address": "Scenic Acres Pathway"},
+      "owner": "City of Calgary",
+      "data_collected": ["bicycle count", "pedestrian count"],
+      "privacy_policy": "Anonymous counts only.",
+      "status": "active",
+      "last_maintenance": "2025-03-01",
+      "install_date": "2023-01-05",
+      "description": "Tracks usage of community pathway."
+    },
+    {
+      "id": "SEN-096",
+      "name": "Skyview Ranch Flood Sensor",
+      "type": "Flood Sensor",
+      "location": {"lat": 51.150000, "lng": -113.933333, "address": "Skyview Ranch Community"},
+      "owner": "City of Calgary",
+      "data_collected": ["water level", "soil moisture"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-05-29",
+      "install_date": "2021-11-15",
+      "description": "Monitors flood risk in northeast community."
+    },
+    {
+      "id": "SEN-097",
+      "name": "Aspen Woods Security Camera",
+      "type": "Security Camera",
+      "location": {"lat": 51.083333, "lng": -114.250000, "address": "Aspen Woods Shopping Centre"},
+      "owner": "Aspen Woods",
+      "data_collected": ["video footage"],
+      "privacy_policy": "Footage stored for 30 days; security only.",
+      "status": "active",
+      "last_maintenance": "2025-03-23",
+      "install_date": "2022-04-10",
+      "description": "Ensures safety at shopping center."
+    },
+    {
+      "id": "SEN-098",
+      "name": "Palliser Smart Streetlight",
+      "type": "Smart Streetlight",
+      "location": {"lat": 51.016667, "lng": -114.116667, "address": "Palliser Community"},
+      "owner": "City of Calgary",
+      "data_collected": ["ambient light", "motion detection"],
+      "privacy_policy": "No personal data; lighting optimization only.",
+      "status": "active",
+      "last_maintenance": "2025-02-28",
+      "install_date": "2020-09-20",
+      "description": "Adaptive lighting for energy efficiency."
+    },
+    {
+      "id": "SEN-099",
+      "name": "Mahogany Lake Sensor",
+      "type": "Water Quality Sensor",
+      "location": {"lat": 50.866667, "lng": -113.950000, "address": "Mahogany Community Lake"},
+      "owner": "City of Calgary",
+      "data_collected": ["water quality", "temperature"],
+      "privacy_policy": "Environmental monitoring only.",
+      "status": "active",
+      "last_maintenance": "2025-05-30",
+      "install_date": "2023-05-10",
+      "description": "Monitors lake water quality in southeast community."
+    },
+    {
+      "id": "SEN-100",
+      "name": "North Glenmore Park Camera",
+      "type": "Wildlife Camera",
+      "location": {"lat": 50.983333, "lng": -114.133333, "address": "North Glenmore Park"},
+      "owner": "City of Calgary",
+      "data_collected": ["images", "motion-triggered video"],
+      "privacy_policy": "Wildlife monitoring only; no visitor surveillance.",
+      "status": "active",
+      "last_maintenance": "2025-03-22",
+      "install_date": "2021-08-15",
+      "description": "Monitors wildlife in park near reservoir."
+    },
+      {
+        "id": "SEN-101",
+        "name": "Macleod Trail and 12 Avenue S.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0412867, "lng": -114.0584045, "address": "Macleod Trail and 12 Avenue S.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-15",
+        "install_date": "2022-03-10",
+        "description": "Northbound traffic camera at Macleod Trail and 12 Avenue S.E. intersection.",
+        "quadrant": "SE",
+        "community": "BELTLINE",
+        "ward": 11,
+        "direction": "Northbound"
+      },
+      {
+        "id": "SEN-102",
+        "name": "4 Street and 6 Avenue S.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0476887, "lng": -114.0714791, "address": "4 Street and 6 Avenue S.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-22",
+        "install_date": "2021-11-05",
+        "description": "Northbound traffic camera at downtown 4 Street and 6 Avenue S.W. intersection.",
+        "quadrant": "SW",
+        "community": "DOWNTOWN COMMERCIAL CORE",
+        "ward": 7,
+        "direction": "Northbound"
+      },
+      {
+        "id": "SEN-103",
+        "name": "14 Street and Heritage Drive S.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 50.9795649, "lng": -114.0948345, "address": "14 Street and Heritage Drive S.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-10",
+        "install_date": "2023-01-15",
+        "description": "Northbound traffic camera at 14 Street and Heritage Drive S.W. intersection.",
+        "quadrant": "SW",
+        "community": "HAYSBORO",
+        "ward": 11,
+        "direction": "Northbound"
+      },
+      {
+        "id": "SEN-104",
+        "name": "Sarcee Trail and Bow Trail S.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.053248, "lng": -114.1646004, "address": "Sarcee Trail and Bow Trail S.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-18",
+        "install_date": "2020-09-20",
+        "description": "Southbound traffic camera at Sarcee Trail and Bow Trail S.W. intersection.",
+        "quadrant": "SW",
+        "community": "PATTERSON",
+        "ward": 6,
+        "direction": "Southbound"
+      },
+      {
+        "id": "SEN-105",
+        "name": "14 Street and Northmount Drive N.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0830435, "lng": -114.0946583, "address": "14 Street and Northmount Drive N.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-05",
+        "install_date": "2021-07-12",
+        "description": "Northbound traffic camera at 14 Street and Northmount Drive N.W. intersection.",
+        "quadrant": "NW",
+        "community": "ROSEMONT",
+        "ward": 4,
+        "direction": "Northbound"
+      },
+      {
+        "id": "SEN-106",
+        "name": "McKnight Boulevard and Barlow Trail N.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0926335, "lng": -114.0016301, "address": "McKnight Boulevard and Barlow Trail N.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-30",
+        "install_date": "2022-02-28",
+        "description": "Eastbound traffic camera at McKnight Boulevard and Barlow Trail N.E. intersection.",
+        "quadrant": "NE",
+        "community": "HORIZON",
+        "ward": 10,
+        "direction": "Eastbound"
+      },
+      {
+        "id": "SEN-107",
+        "name": "McKnight Boulevard and Falconridge Boulevard N.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0960573, "lng": -113.9583799, "address": "McKnight Boulevard and Falconridge Boulevard N.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-12",
+        "install_date": "2023-03-15",
+        "description": "Westbound traffic camera at McKnight Boulevard and Falconridge Boulevard N.E. intersection.",
+        "quadrant": "NE",
+        "community": "FALCONRIDGE",
+        "ward": 5,
+        "direction": "Westbound"
+      },
+      {
+        "id": "SEN-108",
+        "name": "Barlow Trail and Centre Avenue N.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0524052, "lng": -114.0016583, "address": "Barlow Trail and Centre Avenue N.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-25",
+        "install_date": "2021-05-20",
+        "description": "Northbound traffic camera at Barlow Trail and Centre Avenue N.E. intersection.",
+        "quadrant": "NE",
+        "community": "MAYLAND",
+        "ward": 10,
+        "direction": "Northbound"
+      },
+      {
+        "id": "SEN-109",
+        "name": "Edmonton Trail N.E. and Memorial Drive N.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0508253, "lng": -114.0502025, "address": "Edmonton Trail N.E. and Memorial Drive N.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-18",
+        "install_date": "2020-12-10",
+        "description": "Westbound traffic camera at Edmonton Trail N.E. and Memorial Drive N.E. intersection.",
+        "quadrant": "NE",
+        "community": "BRIDGELAND",
+        "direction": "Westbound"
+      },
+      {
+        "id": "SEN-110",
+        "name": "9 Avenue and 11 Street S.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0453306, "lng": -114.0887063, "address": "9 Avenue and 11 Street S.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-15",
+        "install_date": "2022-06-05",
+        "description": "Eastbound traffic camera at 9 Avenue and 11 Street S.W. intersection.",
+        "quadrant": "SW",
+        "community": "DOWNTOWN WEST END",
+        "ward": 8,
+        "direction": "Eastbound"
+      },
+      {
+        "id": "SEN-111",
+        "name": "Elbow Drive and Southland Drive S.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 50.9635345, "lng": -114.084773, "address": "Elbow Drive and Southland Drive S.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-20",
+        "install_date": "2021-09-22",
+        "description": "Southbound traffic camera at Elbow Drive and Southland Drive S.W. intersection.",
+        "quadrant": "SW",
+        "community": "SOUTHWOOD",
+        "ward": 11,
+        "direction": "Southbound"
+      },
+      {
+        "id": "SEN-112",
+        "name": "McKnight Boulevard and Barlow Trail N.E. Camera (Westbound)",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0929547, "lng": -114.0016231, "address": "McKnight Boulevard and Barlow Trail N.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-28",
+        "install_date": "2022-02-28",
+        "description": "Westbound traffic camera at McKnight Boulevard and Barlow Trail N.E. intersection.",
+        "quadrant": "NE",
+        "community": "HORIZON",
+        "ward": 5,
+        "direction": "Westbound"
+      },
+      {
+        "id": "SEN-113",
+        "name": "Metis Trail and Country Hills Boulevard N.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.1531392, "lng": -113.9694858, "address": "Metis Trail and Country Hills Boulevard N.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-08",
+        "install_date": "2023-01-10",
+        "description": "Northbound traffic camera at Metis Trail and Country Hills Boulevard N.E. intersection.",
+        "quadrant": "NE",
+        "community": "CITYSCAPE",
+        "ward": 5,
+        "direction": "Northbound"
+      },
+      {
+        "id": "SEN-114",
+        "name": "16 Avenue and 10 Street N.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0666269, "lng": -114.0845002, "address": "16 Avenue and 10 Street N.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-17",
+        "install_date": "2021-08-15",
+        "description": "Eastbound traffic camera at 16 Avenue and 10 Street N.W. intersection.",
+        "quadrant": "NW",
+        "community": "ROSEDALE",
+        "ward": 7,
+        "direction": "Eastbound"
+      },
+      {
+        "id": "SEN-115",
+        "name": "Centre Street and 20 Avenue N. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.07062, "lng": -114.0625145, "address": "Centre Street and 20 Avenue N."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-22",
+        "install_date": "2022-11-30",
+        "description": "Northbound traffic camera at Centre Street and 20 Avenue N. intersection.",
+        "quadrant": "NE",
+        "community": "TUXEDO PARK",
+        "ward": 7,
+        "direction": "Northbound"
+      },
+      {
+        "id": "SEN-116",
+        "name": "61 Avenue and Barlow Trail S.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 50.998769, "lng": -113.9842336, "address": "61 Avenue and Barlow Trail S.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-20",
+        "install_date": "2021-06-18",
+        "description": "Westbound traffic camera at 61 Avenue and Barlow Trail S.E. intersection.",
+        "quadrant": "SE",
+        "community": "FOOTHILLS",
+        "ward": 9,
+        "direction": "Westbound"
+      },
+      {
+        "id": "SEN-117",
+        "name": "Memorial Drive and 52 Street N.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0533316, "lng": -113.955734, "address": "Memorial Drive and 52 Street N.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-14",
+        "install_date": "2023-02-15",
+        "description": "Westbound traffic camera at Memorial Drive and 52 Street N.E. intersection.",
+        "quadrant": "SE",
+        "community": "PENBROOKE MEADOWS",
+        "ward": 9,
+        "direction": "Westbound"
+      },
+      {
+        "id": "SEN-118",
+        "name": "Macleod Trail and 25 Avenue S.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0305109, "lng": -114.0596441, "address": "Macleod Trail and 25 Avenue S.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-12",
+        "install_date": "2020-10-25",
+        "description": "Northbound traffic camera at Macleod Trail and 25 Avenue S.E. intersection.",
+        "quadrant": "SE",
+        "community": "MANCHESTER INDUSTRIAL",
+        "ward": 9,
+        "direction": "Northbound"
+      },
+      {
+        "id": "SEN-119",
+        "name": "68 Street and 16 Avenue N.E. Camera (Eastbound)",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0669167, "lng": -113.9351107, "address": "68 Street and 16 Avenue N.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-16",
+        "install_date": "2022-07-30",
+        "description": "Eastbound traffic camera at 68 Street and 16 Avenue N.E. intersection.",
+        "quadrant": "NE",
+        "community": "ABBEYDALE",
+        "ward": 10,
+        "direction": "Eastbound"
+      },
+      {
+        "id": "SEN-120",
+        "name": "17 Avenue and 33 Street S.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0378079, "lng": -114.1354718, "address": "17 Avenue and 33 Street S.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-05",
+        "install_date": "2021-04-15",
+        "description": "Westbound traffic camera at 17 Avenue and 33 Street S.W. intersection.",
+        "quadrant": "SW",
+        "community": "KILLARNEY",
+        "ward": 8,
+        "direction": "Westbound"
+      },
+      {
+        "id": "SEN-121",
+        "name": "17 Avenue and 44 Street S.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0378313, "lng": -113.9700122, "address": "17 Avenue and 44 Street S.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-24",
+        "install_date": "2023-05-05",
+        "description": "Westbound traffic camera at 17 Avenue and 44 Street S.E. intersection.",
+        "quadrant": "SE",
+        "community": "FOREST LAWN",
+        "ward": 9,
+        "direction": "Westbound"
+      },
+      {
+        "id": "SEN-122",
+        "name": "37 Street S.W. and 46 Avenue S.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.012562, "lng": -114.141228, "address": "37 Street S.W. and 46 Avenue S.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-10",
+        "install_date": "2022-01-20",
+        "description": "Southbound traffic camera at 37 Street S.W. and 46 Avenue S.W. intersection.",
+        "quadrant": "SW",
+        "community": "GLAMORGAN",
+        "direction": "Southbound"
+      },
+      {
+        "id": "SEN-123",
+        "name": "Anderson Road and Acadia Drive S.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 50.9482003, "lng": -114.041965, "address": "Anderson Road and Acadia Drive S.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-19",
+        "install_date": "2021-10-10",
+        "description": "Westbound traffic camera at Anderson Road and Acadia Drive S.E. intersection.",
+        "quadrant": "SE",
+        "community": "LAKE BONAVISTA",
+        "ward": 14,
+        "direction": "Westbound"
+      },
+      {
+        "id": "SEN-124",
+        "name": "Deerfoot Trail and Memorial Drive N.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0483065, "lng": -114.0178177, "address": "Deerfoot Trail and Memorial Drive N.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-14",
+        "install_date": "2020-08-15",
+        "description": "Southbound traffic camera at Deerfoot Trail and Memorial Drive N.E. intersection.",
+        "quadrant": "SE",
+        "community": "BRIDGELAND/RIVERSIDE",
+        "ward": 9,
+        "direction": "Southbound"
+      },
+      {
+        "id": "SEN-125",
+        "name": "John Laurie Boulevard and 53 Street N.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.1151704, "lng": -114.1544511, "address": "John Laurie Boulevard and 53 Street N.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-17",
+        "install_date": "2022-09-05",
+        "description": "Eastbound traffic camera at John Laurie Boulevard and 53 Street N.W. intersection.",
+        "quadrant": "NW",
+        "community": "DALHOUSIE",
+        "ward": 4,
+        "direction": "Eastbound"
+      },
+      {
+        "id": "SEN-126",
+        "name": "Bow Trail and 33 Street S.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0416129, "lng": -114.1354044, "address": "Bow Trail and 33 Street S.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-08",
+        "install_date": "2021-07-22",
+        "description": "Eastbound traffic camera at Bow Trail and 33 Street S.W. intersection.",
+        "quadrant": "SW",
+        "community": "SPRUCE CLIFF",
+        "ward": 8,
+        "direction": "Eastbound"
+      },
+      {
+        "id": "SEN-127",
+        "name": "Elbow Drive and Heritage Drive S.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 50.9795722, "lng": -114.0831484, "address": "Elbow Drive and Heritage Drive S.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-13",
+        "install_date": "2023-04-18",
+        "description": "Southbound traffic camera at Elbow Drive and Heritage Drive S.W. intersection.",
+        "quadrant": "SW",
+        "community": "HAYSBORO",
+        "ward": 11,
+        "direction": "Southbound"
+      },
+      {
+        "id": "SEN-128",
+        "name": "112 Avenue and Country Hills Boulevard N.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.1498729, "lng": -114.2133505, "address": "112 Avenue and Country Hills Boulevard N.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-16",
+        "install_date": "2022-10-20",
+        "description": "Westbound traffic camera at 112 Avenue and Country Hills Boulevard N.W. intersection.",
+        "quadrant": "NW",
+        "community": "ROYAL VISTA",
+        "ward": 1,
+        "direction": "Westbound"
+      },
+      {
+        "id": "SEN-129",
+        "name": "Bowness Road and Shaganappi Trail N.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0633865, "lng": -114.1491077, "address": "Bowness Road and Shaganappi Trail N.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-11",
+        "install_date": "2021-12-08",
+        "description": "Westbound traffic camera at Bowness Road and Shaganappi Trail N.W. intersection.",
+        "quadrant": "NW",
+        "community": "MONTGOMERY",
+        "ward": 7,
+        "direction": "Westbound"
+      },
+      {
+        "id": "SEN-130",
+        "name": "Falconridge Boulevard and 64 Avenue N.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.1106268, "lng": -113.9469176, "address": "Falconridge Boulevard and 64 Avenue N.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-19",
+        "install_date": "2022-05-15",
+        "description": "Northbound traffic camera at Falconridge Boulevard and 64 Avenue N.E. intersection.",
+        "quadrant": "NE",
+        "community": "TARADALE",
+        "ward": 5,
+        "direction": "Northbound"
+      },
+      {
+        "id": "SEN-131",
+        "name": "Glenmore Trail and 52 Street S.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 50.9795492, "lng": -113.9584756, "address": "Glenmore Trail and 52 Street S.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-09",
+        "install_date": "2021-09-05",
+        "description": "Eastbound traffic camera at Glenmore Trail and 52 Street S.E. intersection.",
+        "quadrant": "SE",
+        "community": "SOUTH FOOTHILLS",
+        "ward": 12,
+        "direction": "Eastbound"
+      },
+      {
+        "id": "SEN-132",
+        "name": "Blackfoot Trail and 42 Avenue S.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0159532, "lng": -114.0485692, "address": "Blackfoot Trail and 42 Avenue S.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-21",
+        "install_date": "2022-03-10",
+        "description": "Southbound traffic camera at Blackfoot Trail and 42 Avenue S.E. intersection.",
+        "quadrant": "SE",
+        "community": "MANCHESTER INDUSTRIAL",
+        "ward": 9,
+        "direction": "Southbound"
+      },
+      {
+        "id": "SEN-133",
+        "name": "64 Avenue and 4 Street N.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.1105859, "lng": -114.0568936, "address": "64 Avenue and 4 Street N.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-23",
+        "install_date": "2023-06-20",
+        "description": "Westbound traffic camera at 64 Avenue and 4 Street N.E. intersection.",
+        "quadrant": "NE",
+        "community": "THORNCLIFFE",
+        "ward": 4,
+        "direction": "Westbound"
+      },
+      {
+        "id": "SEN-134",
+        "name": "52 Street and Peigan Trail S.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0157553, "lng": -113.9588965, "address": "52 Street and Peigan Trail S.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-13",
+        "install_date": "2021-11-30",
+        "description": "Southbound traffic camera at 52 Street and Peigan Trail S.E. intersection.",
+        "quadrant": "SE",
+        "community": "ERIN WOODS",
+        "ward": 9,
+        "direction": "Southbound"
+      },
+      {
+        "id": "SEN-135",
+        "name": "Barlow Trail S.E. and 114 Avenue S.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 50.9506021, "lng": -113.981628, "address": "Barlow Trail S.E. and 114 Avenue S.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-21",
+        "install_date": "2022-08-10",
+        "description": "Southbound traffic camera at Barlow Trail S.E. and 114 Avenue S.E. intersection.",
+        "quadrant": "SE",
+        "community": "EAST SHEPARD INDUSTRIAL",
+        "direction": "Southbound"
+      },
+      {
+        "id": "SEN-136",
+        "name": "Crowchild Trail and 24 Avenue N.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0742671, "lng": -114.1183855, "address": "Crowchild Trail and 24 Avenue N.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-09",
+        "install_date": "2020-07-25",
+        "description": "Northbound traffic camera at Crowchild Trail and 24 Avenue N.W. intersection.",
+        "quadrant": "NW",
+        "community": "BANFF TRAIL",
+        "ward": 7,
+        "direction": "Northbound"
+      },
+      {
+        "id": "SEN-137",
+        "name": "Country Hills Boulevard and 14 Street N.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.143343, "lng": -114.1079527, "address": "Country Hills Boulevard and 14 Street N.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-26",
+        "install_date": "2023-02-05",
+        "description": "Eastbound traffic camera at Country Hills Boulevard and 14 Street N.W. intersection.",
+        "quadrant": "NW",
+        "community": "HIDDEN VALLEY",
+        "ward": 3,
+        "direction": "Eastbound"
+      },
+      {
+        "id": "SEN-138",
+        "name": "68 Street and 16 Avenue N.E. Camera (Westbound)",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0671633, "lng": -113.9351256, "address": "68 Street and 16 Avenue N.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-16",
+        "install_date": "2022-07-30",
+        "description": "Westbound traffic camera at 68 Street and 16 Avenue N.E. intersection.",
+        "quadrant": "NE",
+        "community": "PINERIDGE",
+        "ward": 10,
+        "direction": "Westbound"
+      },
+      {
+        "id": "SEN-139",
+        "name": "Country Hills Boulevard and Beddington Trail N.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.1438849, "lng": -114.0924935, "address": "Country Hills Boulevard and Beddington Trail N.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-07",
+        "install_date": "2021-05-10",
+        "description": "Eastbound traffic camera at Country Hills Boulevard and Beddington Trail N.W. intersection.",
+        "quadrant": "NW",
+        "community": "COUNTRY HILLS",
+        "ward": 3,
+        "direction": "Eastbound"
+      },
+      {
+        "id": "SEN-140",
+        "name": "Crowchild Trail and 12 Mile Coulee Road N.W. Camera (Eastbound)",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.1434647, "lng": -114.2569689, "address": "Crowchild Trail and 12 Mile Coulee Road N.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-25",
+        "install_date": "2022-12-15",
+        "description": "Eastbound traffic camera at Crowchild Trail and 12 Mile Coulee Road N.W. intersection.",
+        "quadrant": "NW",
+        "community": "ROCKY RIDGE",
+        "ward": 1,
+        "direction": "Eastbound"
+      },
+      {
+        "id": "SEN-141",
+        "name": "Canyon Meadows Drive and Bow Bottom Trail S.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 50.9311404, "lng": -114.032288, "address": "Canyon Meadows Drive and Bow Bottom Trail S.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-11",
+        "install_date": "2021-08-20",
+        "description": "Eastbound traffic camera at Canyon Meadows Drive and Bow Bottom Trail S.E. intersection.",
+        "quadrant": "SE",
+        "community": "DEER RIDGE",
+        "ward": 14,
+        "direction": "Eastbound"
+      },
+      {
+        "id": "SEN-142",
+        "name": "Macleod Trail S.W. and Southland Drive S.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 50.9651653, "lng": -114.0718543, "address": "Macleod Trail S.W. and Southland Drive S.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-27",
+        "install_date": "2023-01-25",
+        "description": "Southbound traffic camera at Macleod Trail S.W. and Southland Drive S.W. intersection.",
+        "quadrant": "SW",
+        "community": "HAYSBORO",
+        "direction": "Southbound"
+      },
+      {
+        "id": "SEN-143",
+        "name": "52 Street and 32 Avenue N.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0815164, "lng": -113.9584095, "address": "52 Street and 32 Avenue N.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-06",
+        "install_date": "2020-11-15",
+        "description": "Northbound traffic camera at 52 Street and 32 Avenue N.E. intersection.",
+        "quadrant": "NE",
+        "community": "WHITEHORN",
+        "ward": 10,
+        "direction": "Northbound"
+      },
+      {
+        "id": "SEN-144",
+        "name": "Macleod Trail and 7 Avenue S.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.046375, "lng": -114.0580424, "address": "Macleod Trail and 7 Avenue S.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-28",
+        "install_date": "2019-09-10",
+        "description": "Northbound traffic camera at Macleod Trail and 7 Avenue S.E. intersection.",
+        "quadrant": "SE",
+        "community": "DOWNTOWN COMMERCIAL CORE",
+        "ward": 7,
+        "direction": "Northbound"
+      },
+      {
+        "id": "SEN-145",
+        "name": "14 Street and Northmount Drive N.W. Camera (Southbound)",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0830347, "lng": -114.0948254, "address": "14 Street and Northmount Drive N.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-05",
+        "install_date": "2021-07-12",
+        "description": "Southbound traffic camera at 14 Street and Northmount Drive N.W. intersection.",
+        "quadrant": "NW",
+        "community": "COLLINGWOOD",
+        "ward": 4,
+        "direction": "Southbound"
+      },
+      {
+        "id": "SEN-146",
+        "name": "Edmonton Trail and McKnight Boulevard N.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0960545, "lng": -114.0539695, "address": "Edmonton Trail and McKnight Boulevard N.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-29",
+        "install_date": "2022-06-22",
+        "description": "Eastbound traffic camera at Edmonton Trail and McKnight Boulevard N.E. intersection.",
+        "quadrant": "NE",
+        "community": "GREENVIEW",
+        "ward": 4,
+        "direction": "Eastbound"
+      },
+      {
+        "id": "SEN-147",
+        "name": "Deerfoot Trail and 16 Avenue N.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0669152, "lng": -114.0270525, "address": "Deerfoot Trail and 16 Avenue N.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-29",
+        "install_date": "2023-04-05",
+        "description": "Northbound traffic camera at Deerfoot Trail and 16 Avenue N.E. intersection.",
+        "quadrant": "NE",
+        "community": "RENFREW",
+        "ward": 9,
+        "direction": "Northbound"
+      },
+      {
+        "id": "SEN-148",
+        "name": "Shaganappi Trail and Northland Drive N.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.1026065, "lng": -114.142728, "address": "Shaganappi Trail and Northland Drive N.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-04",
+        "install_date": "2021-03-18",
+        "description": "Northbound traffic camera at Shaganappi Trail and Northland Drive N.W. intersection.",
+        "quadrant": "NW",
+        "community": "BRENTWOOD",
+        "ward": 4,
+        "direction": "Northbound"
+      },
+      {
+        "id": "SEN-149",
+        "name": "Country Hills Boulevard and Shaganappi Trail N.W. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.1425093, "lng": -114.1233669, "address": "Country Hills Boulevard and Shaganappi Trail N.W."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-05-30",
+        "install_date": "2022-10-05",
+        "description": "Northbound traffic camera at Country Hills Boulevard and Shaganappi Trail N.W. intersection.",
+        "quadrant": "NW",
+        "community": "MACEWAN GLEN",
+        "ward": 4,
+        "direction": "Northbound"
+      },
+      {
+        "id": "SEN-150",
+        "name": "1 Street and 17 Avenue S.E. Camera",
+        "type": "Traffic Camera",
+        "location": {"lat": 51.0378219, "lng": -114.0611298, "address": "1 Street and 17 Avenue S.E."},
+        "owner": "City of Calgary",
+        "data_collected": ["video footage", "traffic violations"],
+        "privacy_policy": "Footage stored for 30 days; used for traffic safety enforcement only.",
+        "status": "active",
+        "last_maintenance": "2025-04-03",
+        "install_date": "2020-10-05",
+        "description": "Southbound traffic camera at 1 Street and 17 Avenue S.E. intersection.",
+        "quadrant": "SE",
+        "community": "MISSION",
+        "ward": 11,
+        "direction": "Southbound"
+      }, 
+        {
+          "id": "SEN-151",
+          "name": "Inglewood Bird Sanctuary Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.02953396, "lng": -114.0112214, "address": "Inglewood Bird Sanctuary"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-05-15",
+          "install_date": "2021-08-20",
+          "description": "Monitors bicycle and pedestrian traffic at Inglewood Bird Sanctuary entrance."
+        },
+        {
+          "id": "SEN-152",
+          "name": "Nose Creek Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.04688668, "lng": -114.0198607, "address": "Nose Creek Pathway"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-04-22",
+          "install_date": "2022-03-10",
+          "description": "Tracks pathway usage along Nose Creek recreational area."
+        },
+        {
+          "id": "SEN-153",
+          "name": "Memorial Drive at Prince's Island Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.05694245, "lng": -114.0664882, "address": "Memorial Drive at Prince's Island"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-05-10",
+          "install_date": "2020-07-15",
+          "description": "Monitors heavy pedestrian and bicycle traffic near Prince's Island Park."
+        },
+        {
+          "id": "SEN-154",
+          "name": "5 Street North of 10 Ave SW Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.044643, "lng": -114.073906, "address": "5 Street North of 10 Ave SW"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-04-18",
+          "install_date": "2023-01-05",
+          "description": "Tracks downtown bicycle and pedestrian commuter traffic."
+        },
+        {
+          "id": "SEN-155",
+          "name": "5 Street North of 9 Ave SW Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.04514772, "lng": -114.0738145, "address": "5 Street North of 9 Ave SW"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-05-05",
+          "install_date": "2022-11-12",
+          "description": "Monitors bicycle and pedestrian traffic in downtown core."
+        },
+        {
+          "id": "SEN-156",
+          "name": "9 Ave West of 4 Street SE Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.04436368, "lng": -114.0539707, "address": "9 Ave West of 4 Street SE"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-04-30",
+          "install_date": "2021-09-15",
+          "description": "Tracks east-end commuter bicycle and pedestrian traffic."
+        },
+        {
+          "id": "SEN-157",
+          "name": "Edmonton Tr North of Memorial Dr Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.051323, "lng": -114.050316, "address": "Edmonton Tr North of Memorial Dr"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-05-12",
+          "install_date": "2020-12-08",
+          "description": "Monitors bicycle and pedestrian traffic near Bridgeland."
+        },
+        {
+          "id": "SEN-158",
+          "name": "River Walk Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.05029238, "lng": -114.0546155, "address": "River Walk Pathway"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-04-25",
+          "install_date": "2022-05-20",
+          "description": "Tracks recreational usage of popular River Walk pathway."
+        },
+        {
+          "id": "SEN-159",
+          "name": "South Glenmore Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 50.98707432, "lng": -114.1254047, "address": "South Glenmore Park"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-05-22",
+          "install_date": "2021-06-18",
+          "description": "Monitors pathway usage in South Glenmore Park area."
+        },
+        {
+          "id": "SEN-160",
+          "name": "5 Street North of 5 Ave SW Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.049423, "lng": -114.07359, "address": "5 Street North of 5 Ave SW"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-04-20",
+          "install_date": "2023-02-15",
+          "description": "Tracks downtown core bicycle and pedestrian commuter traffic."
+        },
+        {
+          "id": "SEN-161",
+          "name": "Parkdale Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.05547003, "lng": -114.1308413, "address": "Parkdale Community"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-05-14",
+          "install_date": "2020-09-10",
+          "description": "Monitors pathway usage in Parkdale neighborhood."
+        },
+        {
+          "id": "SEN-162",
+          "name": "7 Street South of 3 Ave SW Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.050327, "lng": -114.0784, "address": "7 Street South of 3 Ave SW"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-04-15",
+          "install_date": "2022-07-05",
+          "description": "Tracks bicycle and pedestrian traffic in downtown west end."
+        },
+        {
+          "id": "SEN-163",
+          "name": "Lindsay Park Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.03300328, "lng": -114.0643532, "address": "Lindsay Park"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-05-18",
+          "install_date": "2021-04-22",
+          "description": "Monitors recreational traffic near Lindsay Park sports facility."
+        },
+        {
+          "id": "SEN-164",
+          "name": "North Glenmore Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 50.97577494, "lng": -114.0994951, "address": "North Glenmore Park"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-04-28",
+          "install_date": "2023-03-10",
+          "description": "Tracks pathway usage in North Glenmore Park area."
+        },
+        {
+          "id": "SEN-165",
+          "name": "Wetlands Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 50.925087, "lng": -113.921745, "address": "Wetlands Pathway"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-05-08",
+          "install_date": "2020-10-30",
+          "description": "Monitors recreational usage of wetlands pathway in southeast Calgary."
+        },
+        {
+          "id": "SEN-166",
+          "name": "12 Ave West of 2 St SW Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.041634, "lng": -114.068985, "address": "12 Ave West of 2 St SW"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-04-17",
+          "install_date": "2021-11-20",
+          "description": "Tracks bicycle and pedestrian traffic in Beltline neighborhood."
+        },
+        {
+          "id": "SEN-167",
+          "name": "12 St SE Pathway Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.04479, "lng": -114.03258, "address": "12 St SE Pathway"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-05-24",
+          "install_date": "2022-08-15",
+          "description": "Monitors pathway usage in southeast Calgary community."
+        },
+        {
+          "id": "SEN-168",
+          "name": "Memorial Drive at 19 St NW Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.04897085, "lng": -114.1046078, "address": "Memorial Drive at 19 St NW"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-04-10",
+          "install_date": "2020-08-25",
+          "description": "Tracks bicycle and pedestrian traffic along Memorial Drive."
+        },
+        {
+          "id": "SEN-169",
+          "name": "5 Street North of 15 Ave SW Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.039036, "lng": -114.07439, "address": "5 Street North of 15 Ave SW"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-05-19",
+          "install_date": "2023-01-30",
+          "description": "Monitors bicycle and pedestrian traffic in Beltline/Sunalta area."
+        },
+        {
+          "id": "SEN-170",
+          "name": "8 Ave West of 8 St SW Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.045986, "lng": -114.081795, "address": "8 Ave West of 8 St SW"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-04-05",
+          "install_date": "2021-07-15",
+          "description": "Tracks downtown bicycle and pedestrian commuter traffic."
+        },
+        {
+          "id": "SEN-171",
+          "name": "Peace Bridge Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.05356, "lng": -114.07836, "address": "Peace Bridge"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-05-26",
+          "install_date": "2019-06-10",
+          "description": "Monitors high-volume bicycle and pedestrian traffic on iconic Peace Bridge."
+        },
+        {
+          "id": "SEN-172",
+          "name": "8 Ave West of 3 Street SW Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.045746, "lng": -114.07067, "address": "8 Ave West of 3 Street SW"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-04-12",
+          "install_date": "2022-04-18",
+          "description": "Tracks downtown core bicycle and pedestrian traffic."
+        },
+        {
+          "id": "SEN-173",
+          "name": "12 Ave West of 8 St SW Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.04198, "lng": -114.08213, "address": "12 Ave West of 8 St SW"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-05-16",
+          "install_date": "2020-11-22",
+          "description": "Monitors bicycle and pedestrian traffic in Beltline neighborhood."
+        },
+        {
+          "id": "SEN-174",
+          "name": "12 Ave West of 3 St SE Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.04131, "lng": -114.05776, "address": "12 Ave West of 3 St SE"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-04-24",
+          "install_date": "2021-10-05",
+          "description": "Tracks east-end bicycle and pedestrian commuter traffic."
+        },
+        {
+          "id": "SEN-175",
+          "name": "10 Street North of 5 Ave NW Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.05897537, "lng": -114.0854958, "address": "10 Street North of 5 Ave NW"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-05-28",
+          "install_date": "2022-09-12",
+          "description": "Monitors bicycle and pedestrian traffic in northwest community."
+        },
+        {
+          "id": "SEN-176",
+          "name": "Bow River Pathway Counter",
+          "type": "Bicycle/Pedestrian Counter",
+          "location": {"lat": 51.04957609, "lng": -114.0863856, "address": "Bow River Pathway"},
+          "owner": "City of Calgary",
+          "data_collected": ["bicycle count", "pedestrian count"],
+          "privacy_policy": "Anonymous counts only; no images or personal data stored.",
+          "status": "active",
+          "last_maintenance": "2025-04-19",
+          "install_date": "2020-05-15",
+          "description": "Tracks recreational usage along popular Bow River pathway."
+        }, 
+
+  {
+    "id": "SEN-177",
+    "name": "Bragg Creek Mouth",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 50.946924,
+      "lng": -114.577839,
+      "address": "Bragg Creek Mouth"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "inactive",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Bragg Creek Mouth."
+  },
+  {
+    "id": "SEN-178",
+    "name": "Bow River Highway 22 Bridge",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.18297,
+      "lng": -114.48733,
+      "address": "Bow River Highway 22 Bridge"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Bow River Highway 22 Bridge."
+  },
+  {
+    "id": "SEN-179",
+    "name": "Bow River Higgins Bridge",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 50.938753,
+      "lng": -114.008639,
+      "address": "Bow River Higgins Bridge"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Bow River Higgins Bridge."
+  },
+  {
+    "id": "SEN-180",
+    "name": "Fish Creek Mouth",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 50.904204,
+      "lng": -114.011341,
+      "address": "Fish Creek Mouth"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Fish Creek Mouth."
+  },
+  {
+    "id": "SEN-181",
+    "name": "West Nose Creek Mountain View Rd",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.189925,
+      "lng": -114.141081,
+      "address": "West Nose Creek Mountain View Rd"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at West Nose Creek Mountain View Rd."
+  },
+  {
+    "id": "SEN-182",
+    "name": "Glenmore Reservoir Heritage Cove",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 50.978082,
+      "lng": -114.10314,
+      "address": "Glenmore Reservoir Heritage Cove"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Glenmore Reservoir Heritage Cove."
+  },
+  {
+    "id": "SEN-183",
+    "name": "Elbow River Highway 22 Bridge",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.032926,
+      "lng": -114.465745,
+      "address": "Elbow River Highway 22 Bridge"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Elbow River Highway 22 Bridge."
+  },
+  {
+    "id": "SEN-184",
+    "name": "Elbow River Sandy Beach",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.010237,
+      "lng": -114.088008,
+      "address": "Elbow River Sandy Beach"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Elbow River Sandy Beach."
+  },
+  {
+    "id": "SEN-185",
+    "name": "Ghost River Benchlands",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.28111,
+      "lng": -114.80344,
+      "address": "Ghost River Benchlands"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Ghost River Benchlands."
+  },
+  {
+    "id": "SEN-186",
+    "name": "Big Hill Creek Mouth",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.18074,
+      "lng": -114.47998,
+      "address": "Big Hill Creek Mouth"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Big Hill Creek Mouth."
+  },
+  {
+    "id": "SEN-187",
+    "name": "Bow River Below Bearspaw Dam",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.100403,
+      "lng": -114.270774,
+      "address": "Bow River Below Bearspaw Dam"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Bow River Below Bearspaw Dam."
+  },
+  {
+    "id": "SEN-188",
+    "name": "Elbow River Twin Bridges",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.01358,
+      "lng": -114.23731,
+      "address": "Elbow River Twin Bridges"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Elbow River Twin Bridges."
+  },
+  {
+    "id": "SEN-189",
+    "name": "Glenmore Reservoir Weaselhead",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 50.98341,
+      "lng": -114.12532,
+      "address": "Glenmore Reservoir Weaselhead"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Glenmore Reservoir Weaselhead."
+  },
+  {
+    "id": "SEN-190",
+    "name": "Nose Creek 15th St",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.170645,
+      "lng": -114.02483,
+      "address": "Nose Creek 15th St"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Nose Creek 15th St."
+  },
+  {
+    "id": "SEN-191",
+    "name": "Bow River Below Ghost Dam",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.22053,
+      "lng": -114.70511,
+      "address": "Bow River Below Ghost Dam"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Bow River Below Ghost Dam."
+  },
+  {
+    "id": "SEN-192",
+    "name": "Bow River Pumphouse",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.04665,
+      "lng": -114.114456,
+      "address": "Bow River Pumphouse"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Bow River Pumphouse."
+  },
+  {
+    "id": "SEN-193",
+    "name": "Bearspaw Reservoir Centre",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.117405,
+      "lng": -114.292106,
+      "address": "Bearspaw Reservoir Centre"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Bearspaw Reservoir Centre."
+  },
+  {
+    "id": "SEN-194",
+    "name": "McLean Creek Mouth",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 50.90228,
+      "lng": -114.67069,
+      "address": "McLean Creek Mouth"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at McLean Creek Mouth."
+  },
+  {
+    "id": "SEN-195",
+    "name": "Nose Creek Mouth",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.047706,
+      "lng": -114.019743,
+      "address": "Nose Creek Mouth"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Nose Creek Mouth."
+  },
+  {
+    "id": "SEN-196",
+    "name": "Elbow River Cobble Flats",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 50.80519,
+      "lng": -114.83581,
+      "address": "Elbow River Cobble Flats"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Elbow River Cobble Flats."
+  },
+  {
+    "id": "SEN-197",
+    "name": "Elbow River Weaselhead Foot Bridge",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 50.991517,
+      "lng": -114.146769,
+      "address": "Elbow River Weaselhead Foot Bridge"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Elbow River Weaselhead Foot Bridge."
+  },
+  {
+    "id": "SEN-198",
+    "name": "Glenmore Reservoir Mid-Lake",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 50.989344,
+      "lng": -114.101033,
+      "address": "Glenmore Reservoir Mid-Lake"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Glenmore Reservoir Mid-Lake."
+  },
+  {
+    "id": "SEN-199",
+    "name": "Bow River Policemans Flats",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 50.841969,
+      "lng": -113.951134,
+      "address": "Bow River Policemans Flats"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Bow River Policemans Flats."
+  },
+  {
+    "id": "SEN-200",
+    "name": "Bow River Cushing Bridge",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.03857,
+      "lng": -114.012943,
+      "address": "Bow River Cushing Bridge"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Bow River Cushing Bridge."
+  },
+  {
+    "id": "SEN-201",
+    "name": "Bearspaw Reservoir East",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.102391,
+      "lng": -114.28714,
+      "address": "Bearspaw Reservoir East"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Bearspaw Reservoir East."
+  },
+  {
+    "id": "SEN-202",
+    "name": "Prairie Creek Mouth",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 50.86692,
+      "lng": -114.78897,
+      "address": "Prairie Creek Mouth"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Prairie Creek Mouth."
+  },
+  {
+    "id": "SEN-203",
+    "name": "Elbow River Stanley Park",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.018486,
+      "lng": -114.070146,
+      "address": "Elbow River Stanley Park"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Elbow River Stanley Park."
+  },
+  {
+    "id": "SEN-204",
+    "name": "Elbow River Above Bragg Creek",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 50.943802,
+      "lng": -114.58,
+      "address": "Elbow River Above Bragg Creek"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Elbow River Above Bragg Creek."
+  },
+  {
+    "id": "SEN-205",
+    "name": "Lott Creek Mouth",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.00881,
+      "lng": -114.236549,
+      "address": "Lott Creek Mouth"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "inactive",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Lott Creek Mouth."
+  },
+  {
+    "id": "SEN-206",
+    "name": "Bow River Upstream of Highwood River",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 50.81972,
+      "lng": -113.79556,
+      "address": "Bow River Upstream of Highwood River"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Bow River Upstream of Highwood River."
+  },
+  {
+    "id": "SEN-207",
+    "name": "Glenmore Reservoir Head Pond",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.000283,
+      "lng": -114.09816,
+      "address": "Glenmore Reservoir Head Pond"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Glenmore Reservoir Head Pond."
+  },
+  {
+    "id": "SEN-208",
+    "name": "Fish Creek 37th St",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 50.929147,
+      "lng": -114.139261,
+      "address": "Fish Creek 37th St"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Fish Creek 37th St."
+  },
+  {
+    "id": "SEN-209",
+    "name": "Bow River Glenbow Ranch",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.15292,
+      "lng": -114.375149,
+      "address": "Bow River Glenbow Ranch"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Bow River Glenbow Ranch."
+  },
+  {
+    "id": "SEN-210",
+    "name": "West Nose Creek Mouth",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.130121,
+      "lng": -114.048182,
+      "address": "West Nose Creek Mouth"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at West Nose Creek Mouth."
+  },
+  {
+    "id": "SEN-211",
+    "name": "Jumpingpound Creek Mouth",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.186658,
+      "lng": -114.501906,
+      "address": "Jumpingpound Creek Mouth"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Jumpingpound Creek Mouth."
+  },
+  {
+    "id": "SEN-212",
+    "name": "Elbow River Stoney Trail",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 50.99293,
+      "lng": -114.17148,
+      "address": "Elbow River Stoney Trail"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Elbow River Stoney Trail."
+  },
+  {
+    "id": "SEN-213",
+    "name": "Bearspaw Reservoir West",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.14422,
+      "lng": -114.32239,
+      "address": "Bearspaw Reservoir West"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Bearspaw Reservoir West."
+  },
+  {
+    "id": "SEN-214",
+    "name": "Elbow River 9th Ave Bridge",
+    "type": "Water Quality Sampling Station",
+    "location": {
+      "lat": 51.044635,
+      "lng": -114.042189,
+      "address": "Elbow River 9th Ave Bridge"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "surface water quality"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors surface water quality at Elbow River 9th Ave Bridge."
+  },
+  {
+    "id": "SEN-215",
+    "name": "Jumpingpound Creek near Cox Hill",
+    "type": "River Level/Flow Monitoring Station",
+    "location": {
+      "lat": 51.00233,
+      "lng": -114.93814,
+      "address": "Jumpingpound Creek near Cox Hill"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "river level",
+      "flow rate"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors river level and flow at Jumpingpound Creek near Cox Hill."
+  },
+  {
+    "id": "SEN-216",
+    "name": "Bow River near Cochrane",
+    "type": "River Level/Flow Monitoring Station",
+    "location": {
+      "lat": 51.17374,
+      "lng": -114.46643,
+      "address": "Bow River near Cochrane"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "river level",
+      "flow rate"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors river level and flow at Bow River near Cochrane."
+  },
+  {
+    "id": "SEN-217",
+    "name": "Bearspaw Diversion",
+    "type": "River Level/Flow Monitoring Station",
+    "location": {
+      "lat": 51.1,
+      "lng": -114.233333,
+      "address": "Bearspaw Diversion"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "river level",
+      "flow rate"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors river level and flow at Bearspaw Diversion."
+  },
+  {
+    "id": "SEN-218",
+    "name": "Elbow River below Glenmore Dam",
+    "type": "River Level/Flow Monitoring Station",
+    "location": {
+      "lat": 51.01279,
+      "lng": -114.0932,
+      "address": "Elbow River below Glenmore Dam"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "river level",
+      "flow rate"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors river level and flow at Elbow River below Glenmore Dam."
+  },
+  {
+    "id": "SEN-219",
+    "name": "Jumpingpound Creek at Township Road 252",
+    "type": "River Level/Flow Monitoring Station",
+    "location": {
+      "lat": 51.12831,
+      "lng": -114.5675,
+      "address": "Jumpingpound Creek at Township Road 252"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "river level",
+      "flow rate"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors river level and flow at Jumpingpound Creek at Township Road 252."
+  },
+  {
+    "id": "SEN-220",
+    "name": "Elbow River at Sarcee Bridge",
+    "type": "River Level/Flow Monitoring Station",
+    "location": {
+      "lat": 50.99464,
+      "lng": -114.16482,
+      "address": "Elbow River at Sarcee Bridge"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "river level",
+      "flow rate"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors river level and flow at Elbow River at Sarcee Bridge."
+  },
+  {
+    "id": "SEN-221",
+    "name": "Bearspaw Reservoir near Calgary",
+    "type": "River Level/Flow Monitoring Station",
+    "location": {
+      "lat": 51.1,
+      "lng": -114.234,
+      "address": "Bearspaw Reservoir near Calgary"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "river level",
+      "flow rate"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors river level and flow at Bearspaw Reservoir near Calgary."
+  },
+  {
+    "id": "SEN-222",
+    "name": "Glenmore Diversion",
+    "type": "River Level/Flow Monitoring Station",
+    "location": {
+      "lat": 51.000556,
+      "lng": -114.0975,
+      "address": "Glenmore Diversion"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "river level",
+      "flow rate"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors river level and flow at Glenmore Diversion."
+  },
+  {
+    "id": "SEN-223",
+    "name": "Glenmore Reservoir at Calgary",
+    "type": "River Level/Flow Monitoring Station",
+    "location": {
+      "lat": 51.000136,
+      "lng": -114.097206,
+      "address": "Glenmore Reservoir at Calgary"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "river level",
+      "flow rate"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors river level and flow at Glenmore Reservoir at Calgary."
+  },
+  {
+    "id": "SEN-224",
+    "name": "Nose Creek above Airdrie",
+    "type": "River Level/Flow Monitoring Station",
+    "location": {
+      "lat": 51.31191,
+      "lng": -114.02759,
+      "address": "Nose Creek above Airdrie"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "river level",
+      "flow rate"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors river level and flow at Nose Creek above Airdrie."
+  },
+  {
+    "id": "SEN-225",
+    "name": "Elbow River at Bragg Creek",
+    "type": "River Level/Flow Monitoring Station",
+    "location": {
+      "lat": 50.94893,
+      "lng": -114.57095,
+      "address": "Elbow River at Bragg Creek"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "river level",
+      "flow rate"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors river level and flow at Elbow River at Bragg Creek."
+  },
+  {
+    "id": "SEN-226",
+    "name": "Bow River at Calgary",
+    "type": "River Level/Flow Monitoring Station",
+    "location": {
+      "lat": 51.05027,
+      "lng": -114.05146,
+      "address": "Bow River at Calgary"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "river level",
+      "flow rate"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors river level and flow at Bow River at Calgary."
+  },
+  {
+    "id": "SEN-227",
+    "name": "Bearspaw Centre",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 51.117405,
+      "lng": -114.292106,
+      "address": "Bearspaw Centre"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Bearspaw Centre."
+  },
+  {
+    "id": "SEN-228",
+    "name": "Bow River 500m Downstream Fish Creek WWTP",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.905866,
+      "lng": -114.011535,
+      "address": "Bow River 500m Downstream Fish Creek WWTP"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Bow River 500m Downstream Fish Creek WWTP."
+  },
+  {
+    "id": "SEN-229",
+    "name": "Bow River Pine Creek WWTP",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.85467,
+      "lng": -113.97446,
+      "address": "Bow River Pine Creek WWTP"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Bow River Pine Creek WWTP."
+  },
+  {
+    "id": "SEN-230",
+    "name": "Glenmore Reservoir G18 Outfall",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.9760909,
+      "lng": -114.1212636,
+      "address": "Glenmore Reservoir G18 Outfall"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Glenmore Reservoir G18 Outfall."
+  },
+  {
+    "id": "SEN-231",
+    "name": "Glenmore Weaselhead",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.98341,
+      "lng": -114.12532,
+      "address": "Glenmore Weaselhead"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Glenmore Weaselhead."
+  },
+  {
+    "id": "SEN-232",
+    "name": "Elbow River 9th Ave Bridge",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 51.044958,
+      "lng": -114.042189,
+      "address": "Elbow River 9th Ave Bridge"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Elbow River 9th Ave Bridge."
+  },
+  {
+    "id": "SEN-233",
+    "name": "Glenmore Head Pond",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 51.000283,
+      "lng": -114.09816,
+      "address": "Glenmore Head Pond"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Glenmore Head Pond."
+  },
+  {
+    "id": "SEN-234",
+    "name": "Pine Creek Mouth",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.845025,
+      "lng": -113.96183,
+      "address": "Pine Creek Mouth"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Pine Creek Mouth."
+  },
+  {
+    "id": "SEN-235",
+    "name": "Bearspaw East",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 51.102391,
+      "lng": -114.28714,
+      "address": "Bearspaw East"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Bearspaw East."
+  },
+  {
+    "id": "SEN-236",
+    "name": "Bow River Bearspaw Raw II",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 51.099707,
+      "lng": -114.228172,
+      "address": "Bow River Bearspaw Raw II"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Bow River Bearspaw Raw II."
+  },
+  {
+    "id": "SEN-237",
+    "name": "Nose Creek Mouth",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 51.047706,
+      "lng": -114.019743,
+      "address": "Nose Creek Mouth"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Nose Creek Mouth."
+  },
+  {
+    "id": "SEN-238",
+    "name": "Glenmore Heritage Cove",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.978082,
+      "lng": -114.10314,
+      "address": "Glenmore Heritage Cove"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Glenmore Heritage Cove."
+  },
+  {
+    "id": "SEN-239",
+    "name": "West Nose Creek Mountain View Rd",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 51.189925,
+      "lng": -114.141081,
+      "address": "West Nose Creek Mountain View Rd"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at West Nose Creek Mountain View Rd."
+  },
+  {
+    "id": "SEN-240",
+    "name": "Bow River Graves Bridge",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.986465,
+      "lng": -114.023662,
+      "address": "Bow River Graves Bridge"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Bow River Graves Bridge."
+  },
+  {
+    "id": "SEN-241",
+    "name": "Elbow River 9th Ave Bridge",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 51.044635,
+      "lng": -114.042189,
+      "address": "Elbow River 9th Ave Bridge"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Elbow River 9th Ave Bridge."
+  },
+  {
+    "id": "SEN-242",
+    "name": "Bearspaw West",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 51.14422,
+      "lng": -114.32239,
+      "address": "Bearspaw West"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Bearspaw West."
+  },
+  {
+    "id": "SEN-243",
+    "name": "Shepard Wetland Outlet",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.936328,
+      "lng": -113.892931,
+      "address": "Shepard Wetland Outlet"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Shepard Wetland Outlet."
+  },
+  {
+    "id": "SEN-244",
+    "name": "West Nose Creek Mouth",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 51.130121,
+      "lng": -114.048182,
+      "address": "West Nose Creek Mouth"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at West Nose Creek Mouth."
+  },
+  {
+    "id": "SEN-245",
+    "name": "Elbow River Twin Bridges",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 51.01358,
+      "lng": -114.23731,
+      "address": "Elbow River Twin Bridges"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Elbow River Twin Bridges."
+  },
+  {
+    "id": "SEN-246",
+    "name": "Glenmore Mid-Lake",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.989344,
+      "lng": -114.101033,
+      "address": "Glenmore Mid-Lake"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Glenmore Mid-Lake."
+  },
+  {
+    "id": "SEN-247",
+    "name": "Nose Creek 15th St",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 51.170645,
+      "lng": -114.02483,
+      "address": "Nose Creek 15th St"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Nose Creek 15th St."
+  },
+  {
+    "id": "SEN-248",
+    "name": "Bow River Upstream of Highwood River",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.81972,
+      "lng": -113.79556,
+      "address": "Bow River Upstream of Highwood River"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Bow River Upstream of Highwood River."
+  },
+  {
+    "id": "SEN-249",
+    "name": "Bow River Bonnybrook WWTP",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 51.002331,
+      "lng": -114.024176,
+      "address": "Bow River Bonnybrook WWTP"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Bow River Bonnybrook WWTP."
+  },
+  {
+    "id": "SEN-250",
+    "name": "Bow River 100m Downstream Fish Creek WWTP",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.896389,
+      "lng": -114.009903,
+      "address": "Bow River 100m Downstream Fish Creek WWTP"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Bow River 100m Downstream Fish Creek WWTP."
+  },
+  {
+    "id": "SEN-251",
+    "name": "Fish Creek 37th St",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.929147,
+      "lng": -114.139261,
+      "address": "Fish Creek 37th St"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Fish Creek 37th St."
+  },
+  {
+    "id": "SEN-252",
+    "name": "Elbow River Stoney Trail",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.99293,
+      "lng": -114.17148,
+      "address": "Elbow River Stoney Trail"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Elbow River Stoney Trail."
+  },
+  {
+    "id": "SEN-253",
+    "name": "Shepard Wetland Inlet (2013)",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.94526,
+      "lng": -113.911127,
+      "address": "Shepard Wetland Inlet (2013)"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Shepard Wetland Inlet (2013)."
+  },
+  {
+    "id": "SEN-254",
+    "name": "Bow River Stier's Ranch",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.84835,
+      "lng": -113.94361,
+      "address": "Bow River Stier's Ranch"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Bow River Stier's Ranch."
+  },
+  {
+    "id": "SEN-255",
+    "name": "Glenmore West Weaselhead",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.9857066,
+      "lng": -114.136932,
+      "address": "Glenmore West Weaselhead"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Glenmore West Weaselhead."
+  },
+  {
+    "id": "SEN-256",
+    "name": "Glenmore Reservoir G13 Outfall",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.9886221,
+      "lng": -114.1126882,
+      "address": "Glenmore Reservoir G13 Outfall"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Glenmore Reservoir G13 Outfall."
+  },
+  {
+    "id": "SEN-257",
+    "name": "Bow River Glenbow Ranch",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 51.15292,
+      "lng": -114.3835,
+      "address": "Bow River Glenbow Ranch"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Bow River Glenbow Ranch."
+  },
+  {
+    "id": "SEN-258",
+    "name": "Shepard Ditch Outlet",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.861984,
+      "lng": -113.861049,
+      "address": "Shepard Ditch Outlet"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Shepard Ditch Outlet."
+  },
+  {
+    "id": "SEN-259",
+    "name": "Fish Creek Mouth",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.904204,
+      "lng": -114.011341,
+      "address": "Fish Creek Mouth"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Fish Creek Mouth."
+  },
+  {
+    "id": "SEN-260",
+    "name": "Bow River 1km Upstream Fish Creek WWTP",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 50.896389,
+      "lng": -113.995122,
+      "address": "Bow River 1km Upstream Fish Creek WWTP"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Bow River 1km Upstream Fish Creek WWTP."
+  },
+  {
+    "id": "SEN-261",
+    "name": "Elbow River Highway 22 Bridge",
+    "type": "Surface Water Sonde Monitoring Station",
+    "location": {
+      "lat": 51.032926,
+      "lng": -114.465745,
+      "address": "Elbow River Highway 22 Bridge"
+    },
+    "owner": "City of Calgary",
+    "data_collected": [
+      "continuous water quality data"
+    ],
+    "privacy_policy": "No personal data collected; environmental data only.",
+    "status": "active",
+    "last_maintenance": "2025-05-01",
+    "install_date": "2020-01-01",
+    "description": "Monitors water quality using sonde instruments at Elbow River Highway 22 Bridge."
+  }
+]

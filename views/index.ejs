@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calgary Sensor Network</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #00f2fe;
+            --secondary-color: #4facfe;
+            --dark-bg: #1a1a1a;
+            --darker-bg: #141414;
+            --light-text: #ffffff;
+            --gray-text: #a0aec0;
+            --card-bg: #2d2d2d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--dark-bg);
+            color: var(--light-text);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Background grid effect */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(rgba(0, 242, 254, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 242, 254, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+            z-index: 1;
+        }
+
+        /* Glowing orb effect */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 30%;
+            left: 60%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 242, 254, 0.1) 0%, rgba(79, 172, 254, 0.05) 30%, transparent 70%);
+            border-radius: 50%;
+            z-index: 1;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-30px, -30px); }
+        }
+
+        .container {
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 24px;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        h1 {
+            color: var(--light-text);
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .description {
+            color: var(--gray-text);
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .location-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .input-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .input-wrapper i {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .location-input {
+            padding: 1rem 1rem 1rem 3rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            font-size: 1.1rem;
+            width: 100%;
+            color: var(--light-text);
+            transition: all 0.3s ease;
+        }
+
+        .location-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(0, 242, 254, 0.2);
+        }
+
+        .location-input::placeholder {
+            color: var(--gray-text);
+        }
+
+        .sensors-button {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--dark-bg);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sensors-button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+        }
+
+        .sensors-button:disabled {
+            background: linear-gradient(135deg, #2d3748, #4a5568);
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        /* Style for Google Places Autocomplete */
+        .pac-container {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            margin-top: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            font-family: 'Space Grotesk', sans-serif;
+            padding: 8px;
+        }
+
+        .pac-item {
+            padding: 8px 12px;
+            color: var(--light-text);
+            border-color: rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+        }
+
+        .pac-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .pac-item-query {
+            color: var(--primary-color);
+        }
+
+        .pac-matched {
+            color: var(--secondary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem;
+                width: 95%;
+                margin: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .description {
+                font-size: 1rem;
+            }
+
+            body::after {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calgary Sensor Network</h1>
+        <p class="description">
+            Explore Calgary's smart city infrastructure through our interactive sensor map. 
+            Enter a location in Calgary to view available sensors and their real-time data.
+        </p>
+        <div class="location-form">
+            <div class="input-wrapper">
+                <i class="fas fa-map-marker-alt"></i>
+                <input 
+                    type="text" 
+                    id="location-input" 
+                    class="location-input" 
+                    placeholder="Enter a location in Calgary..."
+                >
+            </div>
+            <button id="view-sensors" class="sensors-button" disabled>
+                <i class="fas fa-search-location"></i>
+                View Sensors
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let selectedPlace = null;
+        const locationInput = document.getElementById('location-input');
+        const viewSensorsButton = document.getElementById('view-sensors');
+
+        function initAutocomplete() {
+            const autocomplete = new google.maps.places.Autocomplete(locationInput, {
+                componentRestrictions: { country: 'ca' },
+                bounds: new google.maps.LatLngBounds(
+                    new google.maps.LatLng(50.8, -114.2), // SW corner of Calgary
+                    new google.maps.LatLng(51.2, -113.9)  // NE corner of Calgary
+                ),
+                strictBounds: true
+            });
+
+            autocomplete.addListener('place_changed', () => {
+                const place = autocomplete.getPlace();
+                if (!place.geometry) {
+                    alert('Please select a location from the dropdown.');
+                    return;
+                }
+                selectedPlace = place;
+                viewSensorsButton.disabled = false;
+            });
+        }
+
+        locationInput.addEventListener('input', () => {
+            if (!locationInput.value) {
+                viewSensorsButton.disabled = true;
+                selectedPlace = null;
+            }
+        });
+
+        viewSensorsButton.addEventListener('click', () => {
+            if (selectedPlace && selectedPlace.geometry) {
+                const location = {
+                    lat: selectedPlace.geometry.location.lat(),
+                    lng: selectedPlace.geometry.location.lng(),
+                    name: selectedPlace.name || selectedPlace.formatted_address
+                };
+                window.location.href = `/map?location=${encodeURIComponent(JSON.stringify(location))}`;
+            } else {
+                alert('Please select a valid location from the dropdown.');
+            }
+        });
+
+        // Load Google Maps API dynamically
+        function loadGoogleMapsAPI() {
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=<%- NEXT_PUBLIC_GOOGLE_MAPS_API_KEY %>&libraries=places&callback=initAutocomplete`;
+            script.async = true;
+            script.defer = true;
+            document.head.appendChild(script);
+        }
+
+        // Load the API when the page loads
+        window.addEventListener('load', loadGoogleMapsAPI);
+    </script>
+</body>
+</html> 

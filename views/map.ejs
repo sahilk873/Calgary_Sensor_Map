@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calgary Sensor Map</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #00f2fe;
+            --secondary-color: #4facfe;
+            --dark-bg: #1a1a1a;
+            --darker-bg: #141414;
+            --light-text: #ffffff;
+            --gray-text: #a0aec0;
+            --card-bg: #2d2d2d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: var(--dark-bg);
+            color: var(--light-text);
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: var(--darker-bg);
+            padding: 1.2rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: var(--light-text);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+        }
+
+        #location-display {
+            margin-left: 20px;
+            color: var(--gray-text);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .map-container {
+            flex: 1;
+            position: relative;
+            height: calc(100vh - 70px);
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .sensor-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(5px);
+            z-index: 2;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 8px 32px rgba(0, 242, 254, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray-text);
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: var(--primary-color);
+        }
+
+        .chat-container {
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+        }
+
+        .chat-messages {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+
+        .chat-input {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 0.8rem 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: var(--light-text);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .chat-input input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(0, 242, 254, 0.2);
+        }
+
+        .chat-input button {
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--dark-bg);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .chat-input button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .user-message {
+            background: linear-gradient(135deg, rgba(0, 242, 254, 0.1), rgba(79, 172, 254, 0.1));
+            margin-left: 20%;
+            border: 1px solid rgba(0, 242, 254, 0.2);
+        }
+
+        .assistant-message {
+            background: rgba(255, 255, 255, 0.05);
+            margin-right: 20%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #sensor-details {
+            color: var(--light-text);
+        }
+
+        #sensor-details h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #sensor-details p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        #sensor-details strong {
+            color: var(--primary-color);
+        }
+
+        .sensor-data {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+        }
+
+        .sensor-data h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .sensor-data ul {
+            list-style-type: none;
+        }
+
+        .sensor-data li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sensor-data li:last-child {
+            border-bottom: none;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-color);
+        }
+
+        .chat-title {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .chat-title::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(0, 242, 254, 0.7);
+            }
+            
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(0, 242, 254, 0);
+            }
+            
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(0, 242, 254, 0);
+            }
+        }
+
+        .sensor-meta {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .sensor-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sensor-meta-item i {
+            font-size: 1.2rem;
+            min-width: 24px;
+            text-align: center;
+        }
+
+        .sensor-meta-item span {
+            flex: 1;
+        }
+
+        .sensor-data li {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sensor-data li:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .sensor-data i {
+            min-width: 24px;
+            text-align: center;
+        }
+
+        /* Loading animation for location */
+        #location-display.loading::after {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            margin-left: 4px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            animation: loading 1.4s infinite;
+        }
+
+        @keyframes loading {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem;
+            }
+
+            .back-button {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+
+            #location-display {
+                font-size: 0.9rem;
+            }
+
+            .modal-content {
+                padding: 1.5rem;
+                width: 95%;
+            }
+
+            .sensor-meta {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth transitions */
+        .modal-content, .message, .sensor-meta-item, .chat-input button {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Glass morphism effects */
+        .modal-content, .sensor-meta-item, .chat-messages {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .legend {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            max-height: 300px;
+            overflow-y: auto;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            z-index: 1;
+        }
+
+        .legend-title {
+            font-weight: bold;
+            margin-bottom: 8px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 4px 0;
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="/" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            Back to Home
+        </a>
+        <span id="location-display">Loading location...</span>
+    </div>
+    
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
+
+    <div class="sensor-modal" id="sensor-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="sensor-details"></div>
+            <div class="chat-container">
+                <h3 class="chat-title">AI Assistant</h3>
+                <div class="chat-messages" id="chat-messages"></div>
+                <div class="chat-input">
+                    <input type="text" id="chat-input" placeholder="Ask about this sensor...">
+                    <button id="send-message">
+                        <i class="fas fa-paper-plane"></i>
+                        Send
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Color mapping for different sensor types
+        const sensorTypeColors = {
+            'Camera': '#FF0000',           // Red
+            'Air Quality Sensor': '#00FF00', // Green
+            'People Counter': '#0000FF',    // Blue
+            'Security Camera': '#FF4500',   // Orange Red
+            'Traffic Sensor': '#800080',    // Purple
+            'Weather Station': '#FFD700',   // Gold
+            'Water Quality Sensor': '#00FFFF', // Cyan
+            'Bicycle Counter': '#32CD32',   // Lime Green
+            'Noise Sensor': '#FF69B4',     // Hot Pink
+            'Environmental Sensor': '#98FB98', // Pale Green
+            'Wi-Fi Analytics': '#DDA0DD',   // Plum
+            'Parking Sensor': '#4682B4',    // Steel Blue
+            'Flood Sensor': '#4169E1',     // Royal Blue
+            'Smart Waste Bin': '#8B4513',  // Saddle Brown
+            'Wildlife Camera': '#556B2F',   // Dark Olive Green
+            'Soil Moisture Sensor': '#8B4513', // Saddle Brown
+            'Smart Streetlight': '#FFD700', // Gold
+            'Ice Sensor': '#87CEEB',       // Sky Blue
+            'Pedestrian Sensor': '#FF8C00', // Dark Orange
+            'Usage Sensor': '#9370DB',     // Medium Purple
+            'Water Level Sensor': '#20B2AA', // Light Sea Green
+            'Traffic Counter': '#800080',   // Purple
+            'Bicycle/Pedestrian Counter': '#32CD32', // Lime Green
+            'Occupancy Sensor': '#BA55D3',  // Medium Orchid
+            'Speed Radar': '#DC143C'       // Crimson
+        };
+
+        // Default color for any sensor type not in the mapping
+        const defaultSensorColor = '#808080'; // Gray
+
+        let currentSensor = null;
+        let chatHistory = [];
+
+        function initMap() {
+            try {
+                // Parse location from URL
+                const urlParams = new URLSearchParams(window.location.search);
+                const locationParam = urlParams.get('location');
+                const location = JSON.parse(decodeURIComponent(locationParam));
+                
+                // Create the map with custom styling
+                const map = new google.maps.Map(document.getElementById('map'), {
+                    center: {
+                        lat: parseFloat(location.lat),
+                        lng: parseFloat(location.lng)
+                    },
+                    zoom: 15,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    fullscreenControl: true,
+                    styles: [
+                        {
+                            "featureType": "all",
+                            "elementType": "geometry",
+                            "stylers": [{"color": "#242f3e"}]
+                        },
+                        {
+                            "featureType": "all",
+                            "elementType": "labels.text.stroke",
+                            "stylers": [{"color": "#242f3e"}, {"lightness": 10}]
+                        },
+                        {
+                            "featureType": "all",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{"color": "#746855"}]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "geometry",
+                            "stylers": [{"color": "#17263c"}]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "labels.text.fill",
+                            "stylers": [{"color": "#515c6d"}]
+                        },
+                        {
+                            "featureType": "road",
+                            "elementType": "geometry",
+                            "stylers": [{"color": "#38414e"}]
+                        },
+                        {
+                            "featureType": "road",
+                            "elementType": "geometry.stroke",
+                            "stylers": [{"color": "#212a37"}]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "geometry",
+                            "stylers": [{"color": "#283d6a"}]
+                        }
+                    ]
+                });
+
+                // Create legend
+                const legend = document.createElement('div');
+                legend.className = 'legend';
+                
+                const title = document.createElement('div');
+                title.className = 'legend-title';
+                title.textContent = 'Sensor Types';
+                legend.appendChild(title);
+
+                // Sort sensor types alphabetically
+                const sortedTypes = Object.entries(sensorTypeColors).sort((a, b) => a[0].localeCompare(b[0]));
+
+                sortedTypes.forEach(([type, color]) => {
+                    const item = document.createElement('div');
+                    item.className = 'legend-item';
+
+                    const colorBox = document.createElement('div');
+                    colorBox.className = 'legend-color';
+                    colorBox.style.backgroundColor = color;
+
+                    const text = document.createElement('span');
+                    text.textContent = type;
+
+                    item.appendChild(colorBox);
+                    item.appendChild(text);
+                    legend.appendChild(item);
+                });
+
+                map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+
+                // Add location marker with custom icon
+                new google.maps.Marker({
+                    map,
+                    position: {
+                        lat: parseFloat(location.lat),
+                        lng: parseFloat(location.lng)
+                    },
+                    title: location.name,
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE,
+                        scale: 10,
+                        fillColor: "#00f2fe",
+                        fillOpacity: 1,
+                        strokeColor: "#4facfe",
+                        strokeWeight: 2
+                    }
+                });
+
+                // Update location display with icon
+                document.getElementById('location-display').innerHTML = `
+                    <i class="fas fa-map-marker-alt" style="color: var(--primary-color); margin-right: 8px;"></i>
+                    ${location.name}
+                `;
+
+                // Load and display sensors
+                loadSensors(map, location);
+
+            } catch (error) {
+                console.error('Error initializing map:', error);
+            }
+        }
+
+        async function loadSensors(map, location) {
+            try {
+                const response = await fetch('/sensors.json');
+                const sensors = await response.json();
+                
+                // Filter sensors within 5km of selected location
+                const locationSensors = sensors.filter(sensor => 
+                    google.maps.geometry.spherical.computeDistanceBetween(
+                        new google.maps.LatLng(sensor.location.lat, sensor.location.lng),
+                        new google.maps.LatLng(location.lat, location.lng)
+                    ) < 5000
+                );
+
+                // Add markers for each sensor
+                locationSensors.forEach(sensor => {
+                    const markerColor = sensorTypeColors[sensor.type] || defaultSensorColor;
+                    
+                    const marker = new google.maps.Marker({
+                        map,
+                        position: {
+                            lat: sensor.location.lat,
+                            lng: sensor.location.lng
+                        },
+                        title: sensor.name,
+                        icon: {
+                            path: google.maps.SymbolPath.CIRCLE,
+                            fillColor: markerColor,
+                            fillOpacity: 0.8,
+                            strokeColor: markerColor,
+                            strokeWeight: 2,
+                            scale: 8
+                        }
+                    });
+
+                    marker.addListener('click', () => showSensorDetails(sensor));
+                });
+            } catch (error) {
+                console.error('Error loading sensors:', error);
+            }
+        }
+
+        function showSensorDetails(sensor) {
+            currentSensor = sensor;
+            const modal = document.getElementById('sensor-modal');
+            const detailsContainer = document.getElementById('sensor-details');
+            
+            detailsContainer.innerHTML = `
+                <h2>${sensor.name}</h2>
+                <div class="sensor-meta">
+                    <div class="sensor-meta-item">
+                        <i class="fas fa-tag" style="color: var(--primary-color)"></i>
+                        <span><strong>Type:</strong> ${sensor.type}</span>
+                    </div>
+                    <div class="sensor-meta-item">
+                        <i class="fas fa-map-pin" style="color: var(--primary-color)"></i>
+                        <span><strong>Location:</strong> ${sensor.location.address}</span>
+                    </div>
+                    <div class="sensor-meta-item">
+                        <i class="fas fa-info-circle" style="color: var(--primary-color)"></i>
+                        <span><strong>Description:</strong> ${sensor.description}</span>
+                    </div>
+                </div>
+                <div class="sensor-data">
+                    <h3><i class="fas fa-database" style="margin-right: 8px;"></i>Data Collected</h3>
+                    <ul>
+                        ${sensor.data_collected.map(data => `
+                            <li>
+                                <i class="fas fa-chart-line" style="margin-right: 8px; color: var(--primary-color)"></i>
+                                ${data}
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+                <div class="sensor-meta">
+                    <div class="sensor-meta-item">
+                        <i class="fas fa-signal" style="color: var(--primary-color)"></i>
+                        <span><strong>Status:</strong> ${sensor.status}</span>
+                    </div>
+                    <div class="sensor-meta-item">
+                        <i class="fas fa-calendar-plus" style="color: var(--primary-color)"></i>
+                        <span><strong>Installation Date:</strong> ${sensor.install_date}</span>
+                    </div>
+                    <div class="sensor-meta-item">
+                        <i class="fas fa-wrench" style="color: var(--primary-color)"></i>
+                        <span><strong>Last Maintenance:</strong> ${sensor.last_maintenance}</span>
+                    </div>
+                </div>
+            `;
+            
+            modal.style.display = 'block';
+            document.getElementById('chat-messages').innerHTML = '';
+            chatHistory = [];
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();
+            
+            if (!message || !currentSensor) return;
+            
+            const messagesContainer = document.getElementById('chat-messages');
+            
+            // Add user message
+            const userMessageDiv = document.createElement('div');
+            userMessageDiv.className = 'message user-message';
+            userMessageDiv.textContent = message;
+            messagesContainer.appendChild(userMessageDiv);
+            
+            // Clear input
+            input.value = '';
+            
+            try {
+                // Send message to server
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message,
+                        sensor: currentSensor,
+                        chatId: currentSensor.id
+                    })
+                });
+                
+                const data = await response.json();
+                
+                // Add assistant response
+                const assistantMessageDiv = document.createElement('div');
+                assistantMessageDiv.className = 'message assistant-message';
+                assistantMessageDiv.textContent = data.response;
+                messagesContainer.appendChild(assistantMessageDiv);
+                
+                // Scroll to bottom
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                
+            } catch (error) {
+                console.error('Error sending message:', error);
+            }
+        }
+
+        // Event Listeners
+        document.getElementById('close-modal').addEventListener('click', () => {
+            document.getElementById('sensor-modal').style.display = 'none';
+        });
+
+        document.getElementById('send-message').addEventListener('click', sendMessage);
+
+        document.getElementById('chat-input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('sensor-modal');
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+    <script 
+        src="https://maps.googleapis.com/maps/api/js?key=<%- NEXT_PUBLIC_GOOGLE_MAPS_API_KEY %>&libraries=geometry&callback=initMap" 
+        async 
+        defer>
+    </script>
+</body>
+</html> 

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sensor Details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .sensor-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .sensor-map {
+            height: 300px;
+            width: 100%;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .data-collected {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        gmp-map {
+            height: 300px;
+            width: 100%;
+            display: block;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+    </style>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxTDTNYaoUYu1mk5HtsUHNvA_es6Ey3PQ"></script>
+</head>
+<body>
+    <div class="sensor-container">
+        <a href="index.html" class="back-button">Back to Map</a>
+        <div id="sensorDetails">Loading...</div>
+        <gmp-map id="sensorMap" zoom="15"></gmp-map>
+    </div>
+
+    <script>
+        let map;
+        let sensor;
+
+        async function initMap() {
+            try {
+                // Wait for Google Maps to be ready
+                await google.maps.importLibrary("maps");
+                await google.maps.importLibrary("marker");
+
+                // Get sensor ID from URL
+                const urlParams = new URLSearchParams(window.location.search);
+                const sensorId = urlParams.get('id');
+
+                // Load sensor data
+                const response = await fetch('sensors.json');
+                const sensors = await response.json();
+                sensor = sensors.find(s => s.id === sensorId);
+
+                if (sensor) {
+                    // Initialize map
+                    const mapElement = document.querySelector('gmp-map');
+                    mapElement.center = `${sensor.location.lat},${sensor.location.lng}`;
+                    map = await mapElement.innerMap;
+
+                    // Add marker for sensor
+                    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+                    new AdvancedMarkerElement({
+                        position: { lat: sensor.location.lat, lng: sensor.location.lng },
+                        map: map,
+                        title: sensor.name
+                    });
+
+                    // Display sensor details
+                    document.getElementById('sensorDetails').innerHTML = `
+                        <h1>${sensor.name}</h1>
+                        <p><strong>Type:</strong> ${sensor.type}</p>
+                        <p><strong>Location:</strong> ${sensor.location.address}</p>
+                        <p><strong>Description:</strong> ${sensor.description}</p>
+                        <div class="data-collected">
+                            <h3>Data Collected:</h3>
+                            <ul>
+                                ${sensor.data_collected.map(data => `<li>${data}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <p><strong>Owner:</strong> ${sensor.owner}</p>
+                        <p><strong>Status:</strong> ${sensor.status}</p>
+                        <p><strong>Installation Date:</strong> ${sensor.install_date}</p>
+                        <p><strong>Last Maintenance:</strong> ${sensor.last_maintenance}</p>
+                        <p><strong>Privacy Policy:</strong> ${sensor.privacy_policy}</p>
+                    `;
+                } else {
+                    document.getElementById('sensorDetails').innerHTML = '<h1>Sensor not found</h1>';
+                }
+            } catch (error) {
+                console.error('Error loading sensor details:', error);
+                document.getElementById('sensorDetails').innerHTML = '<h1>Error loading sensor data</h1>';
+            }
+        }
+
+        // Initialize the map when the page loads
+        window.addEventListener('load', initMap);
+    </script>
+</body>
+</html> 
