@@ -57,24 +57,26 @@ function createLegend() {
         position: absolute;
         bottom: 30px;
         right: 30px;
-        background: rgba(255, 255, 255, 0.9);
-        padding: 10px;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 12px 16px;
         border-radius: 8px;
-        max-height: 300px;
+        max-height: 320px;
         overflow-y: auto;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         font-family: Arial, sans-serif;
-        font-size: 12px;
+        font-size: 13px;
+        line-height: 1.4;
         z-index: 1;
     `;
 
     const title = document.createElement('div');
     title.textContent = 'Sensor Types';
     title.style.cssText = `
-        font-weight: bold;
+        font-size: 1rem;
+        font-weight: 600;
         margin-bottom: 8px;
-        padding-bottom: 5px;
-        border-bottom: 1px solid #ccc;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #ddd;
     `;
     legend.appendChild(title);
 
@@ -83,15 +85,16 @@ function createLegend() {
 
     sortedTypes.forEach(([type, color]) => {
         const item = document.createElement('div');
-        item.style.cssText = 'display: flex; align-items: center; margin: 4px 0;';
+        item.style.cssText = 'display: flex; align-items: center; margin: 6px 0;';
 
         const colorBox = document.createElement('div');
         colorBox.style.cssText = `
-            width: 12px;
-            height: 12px;
+            width: 14px;
+            height: 14px;
             border-radius: 50%;
+            border: 1px solid #555;
             background-color: ${color};
-            margin-right: 6px;
+            margin-right: 8px;
         `;
 
         const text = document.createElement('span');
