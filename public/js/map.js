@@ -1,5 +1,7 @@
 let map;
 let markers = [];
+// Track visibility for each sensor type
+const sensorTypeVisibility = {};
 let currentSensor = null;
 let searchBox;
 let infoWindow;
@@ -82,8 +84,20 @@ function createLegend() {
     const sortedTypes = Object.entries(sensorTypeColors).sort((a, b) => a[0].localeCompare(b[0]));
 
     sortedTypes.forEach(([type, color]) => {
+        // Default all sensor types to visible
+        sensorTypeVisibility[type] = true;
+
         const item = document.createElement('div');
         item.style.cssText = 'display: flex; align-items: center; margin: 4px 0;';
+
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = true;
+        checkbox.style.marginRight = '4px';
+        checkbox.addEventListener('change', () => {
+            sensorTypeVisibility[type] = checkbox.checked;
+            updateMarkersVisibility();
+        });
 
         const colorBox = document.createElement('div');
         colorBox.style.cssText = `
@@ -97,6 +111,7 @@ function createLegend() {
         const text = document.createElement('span');
         text.textContent = type;
 
+        item.appendChild(checkbox);
         item.appendChild(colorBox);
         item.appendChild(text);
         legend.appendChild(item);
@@ -209,7 +224,7 @@ async function loadSensors() {
         // Add markers for each sensor
         sensors.forEach(sensor => {
             const markerColor = sensorTypeColors[sensor.type] || defaultSensorColor;
-            
+
             const marker = new google.maps.Marker({
                 position: { lat: sensor.location.lat, lng: sensor.location.lng },
                 map: map,
@@ -224,10 +239,16 @@ async function loadSensors() {
                 }
             });
 
+            // Store sensor type and range status
+            marker.sensorType = sensor.type;
+            marker.inRange = true;
+
             // Add click listener to marker
             marker.addListener('click', () => showSensorDetails(sensor));
             markers.push(marker);
         });
+
+        updateMarkersVisibility();
     } catch (error) {
         console.error('Error loading sensors:', error);
     }
@@ -239,9 +260,17 @@ function showNearbySensors(location) {
             location,
             marker.getPosition()
         );
-        
-        // Show markers within 2km
-        marker.setVisible(distance <= 2000);
+
+        // Update range status (2km radius)
+        marker.inRange = distance <= 2000;
+    });
+    updateMarkersVisibility();
+}
+
+function updateMarkersVisibility() {
+    markers.forEach(marker => {
+        const typeVisible = sensorTypeVisibility[marker.sensorType] !== false;
+        marker.setVisible(marker.inRange && typeVisible);
     });
 }
 
