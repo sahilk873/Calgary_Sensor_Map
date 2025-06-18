@@ -5,12 +5,14 @@ import cors from 'cors';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import fs from 'fs';
+import fetch from 'node-fetch';
 
 // Load environment variables
 dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
+const INSIGHTS_SERVICE_URL = process.env.INSIGHTS_SERVICE_URL || 'http://localhost:8000';
 
 // Get directory name in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -52,6 +54,11 @@ app.get('/', (req, res) => {
     res.render('index', {
         NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
     });
+});
+
+// Serve insights page
+app.get('/insights', (req, res) => {
+    res.render('insights');
 });
 
 // Serve map page
@@ -164,6 +171,44 @@ setInterval(() => {
         }
     });
 }, 60 * 60 * 1000);
+
+// Add new Calgary Insights endpoint
+app.post('/api/calgary-insights', async (req, res) => {
+    try {
+        const { query } = req.body;
+        if (!query) {
+            console.error('No query provided in request');
+            return res.status(400).json({ error: 'Search query is required' });
+        }
+
+        console.log(`Forwarding query to insights service: ${query}`);
+        console.log(`Insights service URL: ${INSIGHTS_SERVICE_URL}/insights`);
+
+        const response = await fetch(`${INSIGHTS_SERVICE_URL}/insights`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ query })
+        });
+
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error(`Insights service error: ${response.status} - ${errorText}`);
+            throw new Error(`Insights service error: ${response.status} - ${errorText}`);
+        }
+
+        const data = await response.json();
+        console.log(`Received ${data.length} insights from service`);
+        res.json(data);
+    } catch (error) {
+        console.error('Error in /api/calgary-insights:', error);
+        res.status(500).json({ 
+            error: 'Failed to fetch Calgary insights',
+            details: error.message 
+        });
+    }
+});
 
 // Start the server
 app.listen(port, () => {

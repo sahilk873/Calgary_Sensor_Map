@@ -59,24 +59,29 @@ function createLegend() {
         position: absolute;
         bottom: 30px;
         right: 30px;
-        background: rgba(255, 255, 255, 0.9);
-        padding: 10px;
-        border-radius: 8px;
+        background: rgba(26, 26, 26, 0.95);
+        padding: 15px;
+        border-radius: 12px;
         max-height: 300px;
         overflow-y: auto;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-        font-family: Arial, sans-serif;
-        font-size: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 13px;
         z-index: 1;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     `;
 
     const title = document.createElement('div');
     title.textContent = 'Sensor Types';
     title.style.cssText = `
-        font-weight: bold;
-        margin-bottom: 8px;
-        padding-bottom: 5px;
-        border-bottom: 1px solid #ccc;
+        font-weight: 600;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        color: #00f2fe;
+        font-size: 14px;
     `;
     legend.appendChild(title);
 
@@ -88,12 +93,21 @@ function createLegend() {
         sensorTypeVisibility[type] = true;
 
         const item = document.createElement('div');
-        item.style.cssText = 'display: flex; align-items: center; margin: 4px 0;';
+        item.style.cssText = `
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        `;
 
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.checked = true;
-        checkbox.style.marginRight = '4px';
+        checkbox.style.cssText = `
+            margin-right: 8px;
+            accent-color: #00f2fe;
+        `;
         checkbox.addEventListener('change', () => {
             sensorTypeVisibility[type] = checkbox.checked;
             updateMarkersVisibility();
@@ -101,20 +115,34 @@ function createLegend() {
 
         const colorBox = document.createElement('div');
         colorBox.style.cssText = `
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
+            width: 14px;
+            height: 14px;
+            border-radius: 4px;
             background-color: ${color};
-            margin-right: 6px;
+            margin-right: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         `;
 
         const text = document.createElement('span');
         text.textContent = type;
+        text.style.cssText = `
+            font-size: 13px;
+            color: #ffffff;
+        `;
 
         item.appendChild(checkbox);
         item.appendChild(colorBox);
         item.appendChild(text);
         legend.appendChild(item);
+
+        // Add hover effect
+        item.addEventListener('mouseover', () => {
+            item.style.transform = 'translateX(4px)';
+        });
+        item.addEventListener('mouseout', () => {
+            item.style.transform = 'translateX(0)';
+        });
     });
 
     return legend;
@@ -230,12 +258,13 @@ async function loadSensors() {
                 map: map,
                 title: sensor.name,
                 icon: {
-                    path: google.maps.SymbolPath.CIRCLE,
+                    path: 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z',
                     fillColor: markerColor,
                     fillOpacity: 0.8,
-                    strokeColor: markerColor,
+                    strokeColor: '#ffffff',
                     strokeWeight: 2,
-                    scale: 8
+                    scale: 1.5,
+                    anchor: new google.maps.Point(12, 24)
                 }
             });
 
